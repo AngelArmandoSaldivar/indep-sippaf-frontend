@@ -480,13 +480,14 @@ export class PropuestasComponent {
   }
 
   confirmarCOPER() {
-    this.confirmarModalService.abriraModalCOPER('Al completar este régistro, se marcará como completada la tarea').subscribe(result => {
+    this.confirmarModalService.abriraModalCOPER('Al completar este régistro,se marcará como completada la tarea').subscribe(result => {
       if (result) {
-        this.cerrarCamvasPrincipal();
-        this.showCapturaSeguimiento = false;
+        // El usuario aceptó
         this.toastrService.success("Modúlo Completado");
+  
       }
     });
+
   }
 
   buscarPropuesta(){
