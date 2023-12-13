@@ -137,48 +137,49 @@
                     <label for="subseccionAdd" class="control-label">ID del Acreditado:</label>
                     <div class="col-sm-12">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Buscar..." id="busqueda">
-                            <button class="btn btn-outline btn-primary" title="Buscar" (click)="busquedaAtencion(1)">
+                            <input type="text" class="form-control" id="ida" [(ngModel)]="ida" placeholder="Buscar..." id="busqueda">
+                            <button class="btn btn-outline btn-primary" title="Buscar" (click)="busquedaAtencion()">
                                 <em class="bi bi-search"></em>
                             </button>
                         </div>
                     </div> 
                     <label class="form-label">Nombre del deudor, acreditado o tercero:</label>
                     <div class="input-group col-md-3">
-                        <input type="text" class="form-control"  disabled>
-                        <!--<output type="text" class="form-control" disabled>{{ atenciones.noCliente}} </output>-->
+                        <!--<input type="text" class="form-control"  disabled>-->
+                        <input type="text" class="form-control" id="acre" [(ngModel)]="acre" disabled>
                     </div>
+                
                     <label class="form-label">No.Cliente:</label>
                     <div class="input-group col-md-3">
-                        <input type="text" class="form-control" placeholder="" disabled>
+                        <input type="text" class="form-control" id="ncli" [(ngModel)]="ncli" disabled>
                     </div>
                     <label class="form-label">Encomienda:</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" disabled>
+                        <input type="text" class="form-control" id="encomienda" [(ngModel)]="encomienda" placeholder="" disabled>
                     </div>
                     <label class="form-label">Dirección:</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" disabled>
+                        <input type="text" class="form-control" id="direccion" [(ngModel)]="direccion" placeholder="" disabled>
                     </div>
                     <label class="form-label">Estado:</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" disabled>
+                        <input type="text" class="form-control" id="estadoymuni" [(ngModel)]="estadoymuni" placeholder="" disabled>
                     </div>
                     <label class="form-label">Municipio:</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" disabled>
+                        <input type="text" class="form-control" id="muni" [(ngModel)]="muni" placeholder="" disabled>
                     </div>
                     <label class="form-label">Numero de Teléfono:</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" disabled>
+                        <input type="text" class="form-control" id="ntel" [(ngModel)]="ntel" placeholder="" disabled>
                     </div>
                     <label class="form-label">Correo electrónico:</label>
                     <div class="input-group col-md-3">
-                        <input type="text" class="form-control" placeholder="" disabled>
+                        <input type="text" class="form-control" id="correo" [(ngModel)]="correo" placeholder="" disabled>
                     </div>
                     <label class="form-label">Nombre del interesado tercero:</label>
                     <div class="input-group col-md-3">
-                        <input type="text" class="form-control" placeholder="" disabled>
+                        <input type="text" class="form-control" id="ninteres" [(ngModel)]="ninteres" placeholder="" disabled>
                     </div>
                 </div>
 

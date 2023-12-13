@@ -1,4 +1,4 @@
-import { Component, ViewChild,EventEmitter, Input, Output  } from '@angular/core';
+import { Component, ViewChild,EventEmitter, Input, Output,OnInit  } from '@angular/core';
 import { NgbModal, NgbModalConfig, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 //import { datosEtapasSolicitud } from 'src/app/models/datosEtapasSolicitud.model';
 import { ConfirmarModalService } from 'src/app/services/confirmar-modal/confirmar-modal.service';
@@ -14,6 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AtencionesComponent {
   @Input() id_solicitud: number = 0;
   @Input() solicitante: string = '';
+
   decicion: boolean = false;
   tipoVista: boolean = true; 
   Seleccionado: number = 0;
@@ -35,6 +36,16 @@ export class AtencionesComponent {
   pdfSrc: string = '';
   fInicio: string='';
   fFin:string='';
+  ncli:string='';
+  acre: string='';
+  ida:string='';
+  encomienda : string='';
+  direccion: string='';
+  estadoymuni: string='';
+  muni:string='';
+  ntel: string='';
+  correo: string='';
+  ninteres:string='';
 
   addSeccion: string = '';
   mostrarTabla: boolean = false;
@@ -112,23 +123,30 @@ export class AtencionesComponent {
   }
 
   //######################## FIN  FUNCIONES  OBLIGATORIAS ###################################
-  busquedaAtencion(num: number){
-    this.Seleccionado = num;
-    this.listaDetalle = [{
-      fecha: '01/05/2022',
-      elaboro: 'Cristina Leon',
-      noCliente: '11111',
-      acreditado: 'Juan Pérez',
-      encomienda: 'BANCOMEXT',
-      direccion: 'Chalco',
-      estadoymuni:'Edo. Mex, chalco',
-      telefono:'5584418748',
-      correo:'andrea@gmail.com',
-      asunto:'atencion de acreditado',
-      medioatencion:'email',
-      montopropuesta:'10000',
-      tipopropuesta:'prueba',
-    }];
+  busquedaAtencion(){
+    const idacreditado = new String(this.ida);
+    const noCliente = new String(this.ncli);
+    const acreditado = new String(this.acre);
+    const encomienda = new String(this.encomienda);
+    const direccion = new String(this.direccion);
+    const estadoymuni = new String(this.estadoymuni);
+    const muni = new String(this.muni);
+    const ntel = new String(this.ntel);
+    const correo = new String(this.correo);
+    const ninteres = new String(this.ninteres);
+
+    if (this.ida) {
+      //this.toastrService.error('La fecha de inicio no puede ser mayor a la fecha final');
+      this.ncli='261456';
+      this.acre='Juan Pérez';
+      this.encomienda= 'BANCOMEXT';
+      this.direccion= 'Chalco';
+      this.estadoymuni='Edo. Mex';
+      this.muni='chalco';
+      this.ntel='4435678765';
+      this.correo='andrea@gmail.com'; 
+      this.ninteres='Juan Perez Lopez'
+    }
   }
 
   cambioSeleccion(num: number) {
@@ -212,4 +230,6 @@ export class AtencionesComponent {
       this.cambioSeleccion(1);      
     }
   }
+
+  
 }
