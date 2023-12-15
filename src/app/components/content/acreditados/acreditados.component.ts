@@ -115,10 +115,6 @@ export class AcreditadosComponent {
     if (respuesta) this.cerrarCamvasPrincipal();
 
   }
-
-  //######################## FIN  FUNCIONES  OBLIGATORIAS ###################################
-
-
   
   cambioSeleccion(num: number) {
     this.Seleccionado = num;
@@ -156,11 +152,6 @@ export class AcreditadosComponent {
       Tipocartera: 'OBJETIVO'
     }]
   }
-
-  cambioTipoVista() {
-    this.tipoVista = !this.tipoVista
-  }
-
 
   abrirCamvasPrincipal(datos: any) {
     this.showCamvasPrincipal = true;
