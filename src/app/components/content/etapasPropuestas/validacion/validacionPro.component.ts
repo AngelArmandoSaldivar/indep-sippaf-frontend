@@ -50,7 +50,11 @@ export class ValidacionProComponent {
   certFileName: string = "Ubicación del certificado";
   keyFileName: string = "Ubicación de la llave privada";
   formFile:number=0;
-  
+  documentoFileName: string = "Ubicación del documento";
+  anexoFileName: string = "Ubicación del anexo";
+  pdfSrcDocumento:string = '';
+
+
    //TODOS LOS COMPONENTES QUE REPRECENTEN  UN ESTATUS DEBERAN TENER ESTE OUTPUT
    @Output() respuestaCofirmarModal = new EventEmitter<boolean>();
 
@@ -354,4 +358,13 @@ export class ValidacionProComponent {
     // this.documentoNombre = nombre;
      this.showDetalle = true;
    }
+   onDocumentoFileChange(event: any){
+    this.documentoFileName = event.target.files[0].name;
+    this.anexoFileName = event.target.files[0].name;
+    this.pdfSrcDocumento = "../../../../../assets/anexo.pdf";      
+    this.mostrarPdfADocumento()
+  }
+  mostrarPdfADocumento() {
+    this.pdfSrcDocumento = "../../../../../assets/ejemplo.pdf";
+  }
 }

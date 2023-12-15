@@ -19,7 +19,7 @@ export const dataArchivos = [
     },
     {
         id: 4,
-        seccion: 'Juridico',
+        seccion: 'Jurídico',
         archivo: 'Layout Saldos',
         e_firma: true,
     },
@@ -80,7 +80,7 @@ export const dataSeccion = [
     },
     {
         id: 4,
-        tx_descripcion: 'Juridico',
+        tx_descripcion: 'Jurídico',
         tx_ubicaarchivo: 'JCO'
     },
     {
@@ -118,29 +118,29 @@ export const dataSeccion = [
 export const dataFiles = [
     {
         id: 1,
-        tx_descripcion: 'Formato Propuesta',
+        tx_descripcion: 'Formato propuesta',
     },
     {
         id: 2,
-        tx_descripcion: 'Documentación Propuesta',
+        tx_descripcion: 'Documentación propuesta',
     }, {
         id: 3,
-        tx_descripcion: 'Solicitud Cédula',
+        tx_descripcion: 'Solicitud cédula',
     }, {
         id: 4,
-        tx_descripcion: 'Cédula Juridica',
+        tx_descripcion: 'Cédula juridica',
     }, {
         id: 5,
-        tx_descripcion: 'Solicitud Saldos',
+        tx_descripcion: 'Solicitud saldos',
     }, {
         id: 6,
-        tx_descripcion: 'Layout Saldos',
+        tx_descripcion: 'Layout saldos',
     }, {
         id: 7,
-        tx_descripcion: 'Estado de Cuenta Certificado',
+        tx_descripcion: 'Estado de cuenta certificado',
     }, {
         id: 8,
-        tx_descripcion: 'Dictamen Juridico',
+        tx_descripcion: 'Dictamen jurídico',
     }, {
         id: 9,
         tx_descripcion: 'Detalle del bien',
