@@ -13,32 +13,32 @@ export class DetalleSaedgComponent {
   @Input() id_solicitud: number = 0;
   @Input() solicitante: string = '';
 
-  accionDetalle: number = 1;
-  datosDocumentos: any[] = [
+  Acciondetalle: number = 1;
+  Datosdocumentos: any[] = [
     {
-      nombreDoc: 'Acta'
+      Nombredoc: 'Acta'
     },
     {
-      nombreDoc: 'CURP'
+      Nombredoc: 'CURP'
     },
     {
-      nombreDoc: 'Identificación Oficial'
+      Nombredoc: 'Identificación Oficial'
     }
   ];
 
-  documentoNombre: string = '';
-  showDetalle: boolean = false;
-  showCargaDocumento:boolean = false;
-  showGenerarOficio: boolean = false;
-  showAgregarDocumento:  boolean = false;
-  prevDocumento: boolean = false;
-  prevAnexo: boolean = false;
-  documentoFileName: string = "Ubicación del documento";
-  pdfSrc:string = '';
-  showAgregarAnexo: boolean = false;
-  showSustituirAnexo:boolean = false;
-  anexoFileName: string = "Ubicación del anexo";
-  pdfSrcAnexo:string = '';
+  Documentonombre: string = '';
+  Showdetalle: boolean = false;
+  Showcargadocumento: boolean = false;
+  Showgeneraroficio: boolean = false;
+  Showagregardocumento: boolean = false;
+  Prevdocumento: boolean = false;
+  Prevanexo: boolean = false;
+  Documentofilename: string = "Ubicación del documento";
+  Pdfsrc: string = '';
+  Showagregaranexo: boolean = false;
+  Showsustituiranexo: boolean = false;
+  Anexofilename: string = "Ubicación del anexo";
+  Pdfsrcanexo: string = '';
   
   
 
@@ -47,161 +47,146 @@ export class DetalleSaedgComponent {
   ) {
   }
 
-  abrirPdf(documentoNombre: string = '') {
-    this.documentoNombre = documentoNombre;
-    this.showDetalle = true;
+  Abrirpdf(Documentonombre: string = '') {
+    this.Documentonombre = Documentonombre;
+    this.Showdetalle = true;
   }
-  cargarDocumento(documentoNombre: string = '', accion: string) {
-    this.documentoNombre = documentoNombre
-    this.showCargaDocumento = true;
-  }
-
-  cambioAccionDetalle(accion : number) {
-    this.accionDetalle = accion;
+  Cargardocumento(Documentonombre: string = '', accion: string) {
+    this.Documentonombre = Documentonombre
+    this.Showcargadocumento = true;
   }
 
-
-  private construirUrlDelDocumento(nombreDocumento: string): string | null {
-    
-    return null;
+  Cambioacciondetalle(accion : number) {
+    this.Acciondetalle = accion;
   }
 
-  generarOficio() {
-    this.showGenerarOficio = true;
+
+  Generaroficio() {
+    this.Showgeneraroficio = true;
   }
   
-  cerrarCanvas(tipo: string) {
+  Cerrarcanvas(tipo: string) {
     switch (tipo) {
       case 'oficio':
-        this.showGenerarOficio = false;
+        this.Showgeneraroficio = false;
         break;
       case 'documento':
-        this.showAgregarDocumento = false;
+        this.Showagregardocumento = false;
         break;    
-      case 'prevDocumento':
-        this.prevDocumento = false;
+      case 'Prevdocumento':
+        this.Prevdocumento = false;
         break;
-      case 'prevAnexo':
-        this.prevAnexo = false;
+      case 'Prevanexo':
+        this.Prevanexo = false;
         break;
-      case 'showAgregarAnexo':
-        this.showAgregarAnexo = false;
+      case 'Showagregaranexo':
+        this.Showagregaranexo = false;
         break;
-      case 'showSustituirAnexo':
-        this.showSustituirAnexo = false;
+      case 'Showsustituiranexo':
+        this.Showsustituiranexo = false;
         break;
       default:
         break;
     }
   }
-  guardarOficio() {
+  Guardaroficio() {
     this.toastrService.success('Se ha guardado exitosamente el oficio.')
-    this.showGenerarOficio = false;
+    this.Showgeneraroficio = false;
   } 
-  subirDocumento(event: any) {
-    const archivoSeleccionado = event.target.files[0];
+  Subirdocumento(event: any) {
+    const Archivoseleccionado = event.target.files[0];
 
-    if (archivoSeleccionado) {
+    if (Archivoseleccionado) {
       // Simulamos la carga del documento añadiéndolo al arreglo
-      this.datosDocumentos.push({
-        nombreDoc: archivoSeleccionado.name,
+      this.Datosdocumentos.push({
+        nombreDoc: Archivoseleccionado.name,
       });
 
       // Limpiamos el input de tipo file después de la carga
       event.target.value = '';
 
-      console.log('Documento cargado:', archivoSeleccionado.name);
+      console.log('Documento cargado:', Archivoseleccionado.name);
     }
   }
-  agregarDocumento() {
-    this.showAgregarDocumento = true;
+  Agregardocumento() {
+    this.Showagregardocumento = true;
     const input = document.createElement('input');
     input.type = 'file';
     input.style.display = 'none'; 
     input.onchange = (event: any) => {
-      const archivoSeleccionado = event.target.files[0];
-      if (archivoSeleccionado) {
-        this.datosDocumentos.push({
-          nombreDoc: archivoSeleccionado.name
+      const Archivoseleccionado = event.target.files[0];
+      if (Archivoseleccionado) {
+        this.Datosdocumentos.push({
+          nombreDoc: Archivoseleccionado.name
         });
 
-        console.log('Documento agregado:', archivoSeleccionado.name);
+        console.log('Documento agregado:', Archivoseleccionado.name);
         
       }
     }
 
   }
   
-  onDocumentoFileChange(event: any){
-    this.documentoFileName = event.target.files[0].name;
+  Ondocumentofilechange(event: any){
+    this.Documentofilename = event.target.files[0].name;
   }
 
-  guardarDocumento() {
+  Guardardocumento() {
     this.toastrService.success('Se ha guardado exitosamente el documento.')
-    this.showAgregarDocumento = false;
-  }
-
-  guardarDocumentos() {
-    this.toastrService.success("Se ha guardado exitosamente el documento.")
-    console.log('Documentos guardados:', this.datosDocumentos);
-  }
-
-  completarTarea() {
-    this.toastrService.success("Se ha completado la tarea exitosamente")
-    console.log('Tarea completada');
+    this.Showagregardocumento = false;
   }
 
 
 
-  openVistaPreviaDocumento(documentoNombre: string = '',  tipo: string) {
-    this.documentoNombre = documentoNombre;
-    if (documentoNombre.includes('documento')) {
-      this.pdfSrc = "../../../../../assets/nombre.pdf";
-      this.abrirPdfDocummento();
+  Openvistapreviadocumento(Documentonombre: string = '',  tipo: string) {
+    this.Documentonombre = Documentonombre;
+    if (Documentonombre.includes('documento')) {
+      this.Pdfsrc = "../../../../../assets/nombre.pdf";
+      this.Abrirpdfdocumento();
     }
   }
 
-  abrirPdfDocummento() {
-    this.prevDocumento = true;
+  Abrirpdfdocumento() {
+    this.Prevdocumento = true;
   }
 
-  descargarAnexo() {
+  Descargaranexo() {
     const downloadLink = document.createElement('a');
     const fileName = 'ejemploAnexo.pdf';
-    downloadLink.href = this.pdfSrc;
+    downloadLink.href = this.Pdfsrc;
     downloadLink.download = fileName;
     downloadLink.click();
     this.toastrService.success('Se ha descargado correctamente el Anexo.')
   }
 
-  agregarAnexo() {
-    this.showAgregarAnexo = true;
+  Agregaranexo() {
+    this.Showagregaranexo = true;
   }
 
 
-  guardarAnexo(cadena: string) {
+  Guardaranexo(cadena: string) {
 
     if (cadena == 'guardarAnexo') {
       this.toastrService.success('Se ha guardado exitosamente el anexo.')
-      this.showAgregarAnexo = false;
+      this.Showagregaranexo = false;
     } else {
       this.toastrService.success('Se ha guardado exitosamente el anexo.')
-      this.showSustituirAnexo = false;
+      this.Showsustituiranexo = false;
     }
   }
 
-  sustituirAnexo() {
-    this.showSustituirAnexo = true;
+  Sustituiranexo() {
+    this.Showsustituiranexo = true;
   }
 
-  onAnexoFileChange(event: any) {    
-    this.anexoFileName = event.target.files[0].name;
-    this.pdfSrcAnexo = "../../../../../assets/anexo.pdf";      
-    this.mostrarPdfAnexo()
+  Onanexofilechange(event: any) {    
+    this.Anexofilename = event.target.files[0].name;
+    this.Pdfsrcanexo = "../../../../../assets/anexo.pdf";      
+    this.Mostrarpdfanexo()
   }
 
-  mostrarPdfAnexo() {
-    this.pdfSrcAnexo = "../../../../../assets/nombre.pdf";
+  Mostrarpdfanexo() {
+    this.Pdfsrcanexo = "../../../../../assets/nombre.pdf";
   }
 
 
