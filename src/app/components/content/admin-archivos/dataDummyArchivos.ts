@@ -1,44 +1,44 @@
-export const dataArchivos = [
+export const Dataarchivos = [
     {
         id: 1,
         seccion: 'Validación',
-        archivo: 'Estado de Cuenta Certificado',
+        archivo: 'Estado de cuenta certificado',
         e_firma: true,
     },
     {
         id: 2,
         seccion: 'SIARAF',
-        archivo: 'Documentación Propuesta',
+        archivo: 'Documentación propuesta',
         e_firma: false,
     },
     {
         id: 3,
         seccion: 'SAEDG',
-        archivo: 'Solicitud Cédula',
+        archivo: 'Solicitud cédula',
         e_firma: true,
     },
     {
         id: 4,
         seccion: 'Jurídico',
-        archivo: 'Layout Saldos',
+        archivo: 'Layout saldos',
         e_firma: true,
     },
     {
         id: 5,
         seccion: 'CAPA',
-        archivo: 'Formato Propuesta',
+        archivo: 'Formato propuesta',
         e_firma: false,
     },
     {
         id: 6,
         seccion: 'SIGEBI',
-        archivo: 'Formato Propuesta',
+        archivo: 'Formato propuesta',
         e_firma: true,
     },
     {
         id: 7,
         seccion: 'Análisis',
-        archivo: 'Solicitud Saldos',
+        archivo: 'Solicitud saldos',
         e_firma: false,
     },
     {
@@ -62,7 +62,7 @@ export const dataArchivos = [
     
 ];
 
-export const dataSeccion = [
+export const Dataseccion = [
     {
         id: 1,
         tx_descripcion: 'Validación',
@@ -115,7 +115,7 @@ export const dataSeccion = [
     },
 ];
 
-export const dataFiles = [
+export const Datafiles = [
     {
         id: 1,
         tx_descripcion: 'Formato propuesta',
@@ -128,7 +128,7 @@ export const dataFiles = [
         tx_descripcion: 'Solicitud cédula',
     }, {
         id: 4,
-        tx_descripcion: 'Cédula juridica',
+        tx_descripcion: 'Cédula jurídica',
     }, {
         id: 5,
         tx_descripcion: 'Solicitud saldos',

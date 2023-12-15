@@ -9,20 +9,20 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <label for="seccion" class="control-label">Sección</label>
-                        <select class="form-select" aria-label="Default select example" id="seccion" [(ngModel)]="seccion"
-                        (change)="changeSeccion">
+                        <select class="form-select" aria-label="Default select example" id="seccion" [(ngModel)]="Seccion"
+                        (change)="Changeseccion">
                         <option>Elige una opción</option>
-                        <option *ngFor="let item of secciones" [value]="item.tx_ubicaarchivo">
+                        <option *ngFor="let item of Secciones" [value]="item.tx_ubicaarchivo">
                             {{item.tx_descripcion}}
                         </option>
                         </select>
                     </div>
                     <div class="col-sm-4">
                         <label for="archivo" class="control-label">Archivo:</label>
-                        <select class="form-select" aria-label="Default select example" id="archivo" [(ngModel)]="archivo"
-                        (change)="changeArchivos()">
+                        <select class="form-select" aria-label="Default select example" id="archivo" [(ngModel)]="Archivo"
+                        (change)="Changearchivos()">
                         <option>Elige una opción</option>
-                        <option *ngFor="let item of archivos" [value]="item.id">
+                        <option *ngFor="let item of Archivos" [value]="item.id">
                             {{ item.tx_descripcion }}
                         </option>
                         </select>
@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-sm-12 mt-2">
                         <button class="btn btn-primary boton-derecho " type="button" id="button-addon2" title="Buscar"
-                        (click)="busquedaArchivos()">
+                        (click)="Busquedaarchivos()">
                         <em class="bi bi-search"></em> Buscar
                         </button>
                     </div>
@@ -42,14 +42,14 @@
 
     <div class="row m-0 p-0">
         <div class="col-sm-4">
-            <button type="button" class="btn btn-positivo-modal" (click)="agregarArchivo()">
+            <button type="button" class="btn btn-positivo-modal" (click)="Agregararchivo()">
                 <i class="bi bi-plus-circle"></i> Agregar
             </button>
         </div>
-        <div class="col-sm-8" *ngIf="mostrarTabla">
+        <div class="col-sm-8" *ngIf="Mostrartabla">
             <sg-paginador></sg-paginador>
         </div>
-        <div class="col-sm-12" *ngIf="mostrarTabla">
+        <div class="col-sm-12" *ngIf="Mostrartabla">
             <table class="table table-hover">
                 <thead>
                   <tr class="table-secondary">
@@ -61,7 +61,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let item of dataTablaArchivos">
+                  <tr *ngFor="let item of Datatablaarchivos">
                     <th>{{item.id}}</th>
                     <th>{{item.seccion}}</th>
                     <th>{{item.archivo}}</th>
@@ -80,12 +80,12 @@
 
 
 <!-- OffCanvas Agregar Archivo -->
-<div class="offcanvas offcanvas-end canvasPrimario" [class.show]="showAgregarArchivo" [class.offcanvas-bajar]=""
+<div class="offcanvas offcanvas-end canvasPrimario" [class.show]="Showagregararchivo" [class.offcanvas-bajar]=""
   ngtabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <h1>Nuevo Archivo</h1>
     <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
-      (click)="cerrarOffCanvas(1)"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
+      (click)="Cerraroffcanvas(1)"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
   </div>
   <div class="offcanvas-body">
     <div class="card">
@@ -93,9 +93,9 @@
         <div class="row">
           <div class="col-sm-6">
             <label for="seccionAdd" class="control-label">Sección:</label>
-            <select class="form-select" aria-label="Default select example" id="seccionAdd" (change)="changeSeccion()">
+            <select class="form-select" aria-label="Default select example" id="seccionAdd" (change)="Changeseccion()">
               <option>Elige una opción</option>
-              <option *ngFor="let item of secciones" [value]="item.tx_ubicaarchivo">
+              <option *ngFor="let item of Secciones" [value]="item.tx_ubicaarchivo">
                 {{ item.tx_descripcion }}
               </option>
             </select>
@@ -103,9 +103,9 @@
           <div class="col.sm-6"></div>
           <div class="col-sm-6">
             <label for="archivoAdd" class="control-label">Archivo:</label>
-            <select class="form-select" aria-label="Default select example" id="archivoAdd" (change)="changeArchivos()">
+            <select class="form-select" aria-label="Default select example" id="archivoAdd" (change)="Changearchivos()">
               <option>Elige una opción</option>
-              <option *ngFor="let item of archivos" [value]="item.id">
+              <option *ngFor="let item of Archivos" [value]="item.id">
                 {{ item.tx_descripcion }}
               </option>
             </select>
@@ -176,10 +176,10 @@
   <div class="offcanvas-footer">
     <div class="row">
       <div class="col-sm-12">
-        <button type="button" class="btn btn-negativo-modal boton-derecho" (click)="cerrarOffCanvas(1)">
+        <button type="button" class="btn btn-negativo-modal boton-derecho" (click)="Cerraroffcanvas(1)">
           Cancelar
         </button>
-        <button type="button" class="btn btn-positivo-modal boton-derecho" (click)="guadarArchivo()">
+        <button type="button" class="btn btn-positivo-modal boton-derecho" (click)="Guardararchivo()">
           Guardar
         </button>
       </div>

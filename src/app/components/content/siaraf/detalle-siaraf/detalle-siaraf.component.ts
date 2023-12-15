@@ -18,11 +18,11 @@ export class DetalleSiarafComponent {
 
 
 
-  tipoVista: boolean = true;
-  showCamvasPrincipal: boolean = false;
+  Tipovista: boolean = true;
+  Showcamvasprincipal: boolean = false;
 
 
-  datosSiaraf: any[] = [
+  Datossiaraf: any[] = [
     {
       cliente: 'Martín Reyes',
       sucursal: 'CDMX',

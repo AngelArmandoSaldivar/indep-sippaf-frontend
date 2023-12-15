@@ -16,15 +16,16 @@ export class SiarafComponent {
 
 
 
-  accionDetalle: number = 1; // accion de detalle
-  documentoNombre: string = '';
-  showDetalle: boolean = false;
-  showCargaDocumento:boolean = false;
-  FormularioConfirma !: FormGroup;
   
-  showAgregarDocumento:  boolean = false;
-  prevDocumento: boolean = false;
-  prevAnexo: boolean = false;
+  Acciondetalle: number = 1;
+ 
+  Documentonombre: string = '';
+  Showdetalle: boolean = false;
+  Showcargadocumento: boolean = false;
+  Formularioconfirma !: FormGroup;
+  Showagregardocumento: boolean = false;
+  Prevdocumento: boolean = false;
+  Prevanexo: boolean = false;
   Seleccionado: number = 0;
 
 
@@ -38,31 +39,31 @@ export class SiarafComponent {
 
   
 
-  datosDocumentos: any[] = [
+  Datosdocumentos: any[] = [
     {
-      nombreDoc: 'Acta'
+      Nombredoc: 'Acta'
     },
     {
-      nombreDoc: 'CURP'
+      Nombredoc: 'CURP'
     },
     {
-      nombreDoc: 'Identificación Oficial'
+      Nombredoc: 'Identificación Oficial'
     }
   ];
 
 
-  cambioAccionDetalle(accion: number) {
-    this.accionDetalle = accion;
+  Cambioacciondetalle(accion: number) {
+    this.Acciondetalle = accion;
   }
 
-  abrirPdf(documentoNombre: string = '') {
-    this.documentoNombre = documentoNombre;
-    this.showDetalle = true;
+  Abrirpdf(Documentonombre: string = '') {
+    this.Documentonombre = Documentonombre;
+    this.Showdetalle = true;
   }
 
-  cargarDocumento(documentoNombre: string = '', accion: string) {
-    this.documentoNombre = documentoNombre
-    this.showCargaDocumento = true;
+  Cargardocumento(Documentonombre: string = '', accion: string) {
+    this.Documentonombre = Documentonombre
+    this.Showcargadocumento = true;
   }
 
   
