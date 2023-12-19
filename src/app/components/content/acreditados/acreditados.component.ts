@@ -14,20 +14,15 @@ import { dataArchivos,dataMunicipio, dataFiles,dataEntidad,dataEncomienda, dataS
 export class AcreditadosComponent {
   @Input() id_solicitud: number = 0;
   @Input() solicitante: string = '';
-  decicion: boolean = false;
-
   tipoVista: boolean = true;
   Seleccionado: number = 0;
   tituloSeleccionado: string = '';
   showAgregarAcreditado: boolean = false;
-  ///listadoSolicitudes: datosEtapasSolicitud[];
   listaDatos: any[] = [];
   fInicio: string='';
   fFin:string='';
   datosAcreditado = datosAcreditado;
   documentos = documentos;
-
-  archivo: string = 'Elige una opción';
   archivos: any = dataFiles;
   municipios: any = dataMunicipio;
   dataTablaArchivos = dataArchivos;
@@ -43,23 +38,7 @@ export class AcreditadosComponent {
 
   cartera: string = 'Elige una opción';
   carteras: any = TipoCartera;
-
-  addSeccion: string = '';
-  mostrarTabla: boolean = false;
-
-  documentoNombre: string = '';
-  showDetalleAcreditado: boolean = false;
-  showDocumento: boolean = false;
-
-  nombreDocumento: string = '';
-  pdfSrc: string = '';
-
-
   showCamvasPrincipal: boolean = false;
-  datosNombramiento: any;
-  tipoAutorizacion: string = '';
-  
-
 
  
   constructor(
@@ -67,9 +46,6 @@ export class AcreditadosComponent {
     private confirmarModalService: ConfirmarModalService,
   ) {
     this.Seleccionado = 1;
-    /*this.listadoSolicitudes = [
-
-    ]*/
   }
 
   isDisplay = true;
@@ -82,17 +58,9 @@ export class AcreditadosComponent {
     this.isDisplay1=!this.isDisplay1;
   }
 
-    
-
   changeSeccion() {}
 
   changeSubseccion() {}
-
-  changeArchivos() {}
-
-  busquedaArchivos() {
-    this.mostrarTabla = true;
-  }
 
   agregarAcreditado() {
     this.showAgregarAcreditado = true;
@@ -109,24 +77,8 @@ export class AcreditadosComponent {
     }
   }
 
- 
-  // SI AL FINAL CONFIRMA  EL ULTIMO MODAL ENTONCES CERRAMOS TODO, INCLUIDO EL CAMVAS ACTUAL Y ACTUALIZAMOS  LOS DATOS DEL ESTATUS DONDE ESTEMOS
-  respuestaCofirmarModal(respuesta: boolean) {
-    if (respuesta) this.cerrarCamvasPrincipal();
-
-  }
-  
   cambioSeleccion(num: number) {
     this.Seleccionado = num;
-    /*this.listadoSolicitudes.forEach(solicitud => {
-      solicitud.activo = false;
-    });
-    this.listadoSolicitudes.forEach(solicitud => {
-      if (solicitud.indice == num) {
-        solicitud.activo = true;
-      }
-    });*/
-
     this.listaDatos = [{
       NombreAcreditado: 'Juan Pérez',
       IDAcreditado: '101',
@@ -166,16 +118,8 @@ export class AcreditadosComponent {
     this.showAgregarAcreditado = false;
   }
 
-  descargarAcreditados() {
-    const downloadLink = document.createElement('a');
-    const fileName = 'sampleAcreditado.pdf';
-    downloadLink.href = this.pdfSrc;
-    downloadLink.download = fileName;
-    downloadLink.click();
-  }
-
+  //Compara Fechas
   comparaFechas() {
-    
     const fechaInicioDate = new Date(this.fInicio);
     const fechaFinDate = new Date(this.fFin);
     if (fechaInicioDate > fechaFinDate) {

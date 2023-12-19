@@ -207,7 +207,7 @@
                     <label for="subseccionAdd" class="control-label">Entidad federativa:</label>
                     <select class="form-select" aria-label="Default select example" id="subseccionAdd"
                         (change)="changeSubseccion()">
-                        <option>Elige una opción</option>
+                        <option>{{entidad}}</option>
                         <option *ngFor="let item of entidades" [value]="item.tx_ubicaarchivo">
                             {{ item.tx_descripcion }}
                         </option>
