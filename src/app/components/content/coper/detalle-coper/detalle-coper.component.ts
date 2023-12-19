@@ -175,11 +175,11 @@ export class DetalleCoperComponent {
 
   respuestaCofirmarModal(respuesta: boolean) {
     if (respuesta) this.cerrarCamvasPrincipal();
-    this.toastrService.success("Registro guardado correctamente")
+    this.toastrService.success("Registro guardado correctamente.")
   }
 
   confirmarCOPER() {
-    this.confirmarModalService.abriraModalCOPER('Al completar este régistro, se marcará como completada la tarea').subscribe(result => {
+    this.confirmarModalService.abriraModalCOPER('Al completar este régistro, se marcará como completada la tarea.').subscribe(result => {
       if (result) {
         // El usuario aceptó
         this.toastrService.success("Modúlo Completado");
@@ -223,7 +223,7 @@ export class DetalleCoperComponent {
   //Notas
 
   guardarNota(){
-    this.toastrService.success('Nota guardada exitosamente')
+    this.toastrService.success('Nota guardada exitosamente.')
     this.showAgregarNota = false;
   }
 
@@ -249,7 +249,7 @@ export class DetalleCoperComponent {
   //Formatos
 
   guardarFormato(){
-    this.toastrService.success('Formato guardado exitosamente')
+    this.toastrService.success('Formato guardado exitosamente.')
     this.showAgregarFormato = false;
   }
 

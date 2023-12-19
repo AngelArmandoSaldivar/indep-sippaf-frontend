@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-12" *ngIf="tipoVista">
+    <div class="col-sm-12" *ngIf="Tipovista">
         <div class="col-sm-12 scroll-tabla" data-testid="edosTable">
             <table class="table table-hover">
                 <thead>
@@ -12,7 +12,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let dato of datosSiaraf"  >
+                    <tr *ngFor="let dato of Datossiaraf"  >
                         <td>{{ dato.cliente }}</td>
                         <td>{{ dato.sucursal }}</td>
                         <td>{{ dato.fecha }}</td>

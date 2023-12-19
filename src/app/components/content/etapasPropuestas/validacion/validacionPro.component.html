@@ -25,7 +25,7 @@
                                 <thead>
                                     <tr class="table-secondary">
                                         <th style="width: 5%;">#</th>
-                                        <th style="width: 35%;">Tipo Documento</th>
+                                        <th style="width: 35%;">Tipo documento</th>
                                         <th style="width: 25%;">Tipo de firma</th>
                                         <th style="width: 35%;" class="valoresCentrados">Acciones</th>
                                     </tr>
@@ -255,7 +255,7 @@
 <div class="offcanvas offcanvas-end canvasTerciario" [class.show]="showCargaDocumento" ngtabindex="-1"
     id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1 style="visibility: hidden;">Titulo</h1>
+        <h1 style="visibility: hidden;">Título</h1>
         <button type="button" class="btn btn-negativo-modal boton-derecho" data-bs-dismiss="offcanvas"
             aria-label="Close" (click)="cerrarCargaDocumentos()"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
@@ -301,7 +301,7 @@
             <div class="text-end">
                 <button class="btn btn-positivo-modal boton-derecho" title="Firmar"
                 (click)="openFirma()">
-                    Oficio Firmado&nbsp;<i class="bi bi-pen"></i>
+                    Oficio firmado&nbsp;<i class="bi bi-pen"></i>
                 </button>
             </div>
             <div>
@@ -325,15 +325,30 @@
 <div class="offcanvas offcanvas-end canvasTerciario" [class.show]="showFirmado" ngtabindex="-1" id="offcanvasRight"
     aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Documento Firmado</h1>
+        <h1>Documento firmado</h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="cerrarDocFirmado()"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
     <div class="offcanvas-body">
-        <div class="row">
-            <div class="col-sm-12">
-                <!-- <label for="formFile" class="form-label"><em class="bi bi-upload"></em></label> -->
-                <input class="form-control" type="file" id="formFile">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="card-body row" style="padding: 15px 15px;">                
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <label for="documento" class="control-label" style="display: none" >Cargar Documento</label>
+                            <input class="form-control" type="text" placeholder="Ubicación del documento" name="documento" id="documento" size="25" readonly="readonly" value="{{documentoFileName}}" disabled>
+                            <label for="fileDocumento" class="control-label" style="display: none" >Cargar Documento</label>
+                            <input type="file" style="display: none" id="fileDocumento" accept=".pdf" (change)="onDocumentoFileChange($event)" formControlName="key">
+                            <span class="input-group-btn" style="vertical-align: bottom">
+                            <button type="button" class="btn btn-secundary" id="btnDocumento" name="btnDocumento" onclick="document.getElementById('fileDocumento').click();">Buscar</button>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">
+                            <pdf-viewer [src]="pdfSrcDocumento" [render-text]="true" [original-size]="false"
+                                    style="width: 700px; height: 100vh;"></pdf-viewer>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

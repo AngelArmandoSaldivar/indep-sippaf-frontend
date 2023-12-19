@@ -3,7 +3,8 @@
         <div class="card">
             <div class="card-body row">
                 <div class="col-12 mb-14">
-                    <h2 class="text-center">Administración de Alertas</h2>
+                    <h2>Administración de alertas</h2>
+                    <hr class="red">
                 </div>
                 <div class="col-sm-12">
                     <div class="card-body">
@@ -19,12 +20,18 @@
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let dato of datosAlertas">
-                                        <td>{{ dato.estatus}}</td>
+                                        <td>
+                                            <div class="col-md-4">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="chkEstatus" onchange="cambiaEstatus()" checked="" disabled>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td>{{ dato.nombre }}</td>
                                         <td>{{ dato.tiempo }}</td>
                                         <td>
-                                            <div class="text-end">
-                                                <button type="button" class="btn btn-neutral-modal" (click)="editarAlerta(dato.name)">Editar</button>
+                                            <div class="bi-text">
+                                                <button type="button" class="btn btn-neutral-modal" (click)="editarAlerta(dato.nombre, dato.tiempo, dato.estatus)">Editar</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -43,37 +50,74 @@
 <div class="offcanvas offcanvas-end canvasSecundario" [class.show]="showEditarAlerta" ngtabindex="-1"
     id="offcanvasDocumento" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Editar Alerta </h1>
+        <h1>Editar Alerta - {{nombreAlerta}} </h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
-            (click)="cerrarCanvas()"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
+            (click)="cerrarCanvas()">Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
     <div class="offcanvas-body">
         <div class="col-sm-12">
             <div class="row">                 
                 <div class="card-body row" style="padding: 15px 15px;">                
-                    <div class="col-md-12" >
-                        Seleccione una nueva opcion para <br />
-                        <!--<strong>{{nombrePerfil}}</strong>-->
-                        <strong> Nueva Asignacion </strong>
-                    </div>
-                    <br /><br /><br /><br />
                     <div class="col-md-12">
-                        <select class="form-select" aria-label="Default select example" id="subseccionAdd"
-                        (change)="changeSubseccion()">
-                        <option>Elige una opción</option>
 
-                        <option *ngFor="let item of dataAlertas" [value]="item.id">
-                            {{ item.name }}
-                        </option>
-                    </select>
-                    </div>    
-                    <br /><br /><br />
-                    <div class="col-md-12">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="chkEstatus" onchange="cambiaEstatus()" checked="">
-                            <label class="form-check-label" for="chkEstatus" id="lblEstatus">Activo</label>
-                        </div>        
-                    </div>                                                         
+                        <div class="row mb-2">
+                            <div class="col-md-4">
+                                Nombre:
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="{{nombreAlerta}}">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-md-4">
+                                Estatus:
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="chkEstatus" onchange="cambiaEstatus()" checked="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-md-4">
+                                Tiempo:
+                            </div>
+                            <div class="col-md-4">
+                                <input type="number" class="form-control" placeholder="{{tiempoAlerta}}">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                    <div class="text-center" role="group" aria-label="First group">
+                                        <button type="button" id="Font Family" class="bi bi-border-style"></button>
+                                        <button type="button" id="bold" class="bi bi-type-bold"></button>
+                                        <button type="button" id="underline" class="bi bi-type-underline"></button>
+                                        <button type="button" id="Remove" class="bi bi-eraser"></button>
+                                        <button type="button" id="Font Family" class="bi bi-file-earmark-font-fill"></button>
+                                        <button type="button" id="Font Color" class="bi bi-paint-bucket"></button>
+                                        <button type="button" id="List" class="bi bi-list-ul"></button>
+                                        <button type="button" id="Order list" class="bi bi-list-ol"></button>
+                                        <button type="button" id="Parrafo" class="bi bi-text-paragraph"></button>
+                                        <button type="button" id="Table" class="bi bi-table"></button>
+                                        <button type="button" id="Link" class="bi bi-link"></button>
+                                        <button type="button" id="Imagen" class="bi bi-image"></button>
+                                        <button type="button" id="Video" class="bi bi-camera-video"></button>
+                                        <button type="button" id="FullScreen" class="bi bi-arrows-fullscreen"></button>
+                                        <button type="button" id="CodeView" class="bi bi-code-slash"></button>
+                                        <button type="button" id="Help" class="bi bi-question-lg"></button>
+                                        
+                                        
+                                    </div>
+                                    <textarea id="descripcion" class="form-control" placeholder="Ingresa una descripción" ></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>                                                       
                 </div>
             </div>            
         </div>

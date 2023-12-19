@@ -15,6 +15,7 @@ import { HistorialComponent} from "./historial/historial.component";
 import { RolesPerfilesComponent } from './rolesPerfiles/rolesPerfiles.component';
 import { ReportesComponent } from './reportes/reportes.component';
 import { AlertasComponent } from "./alertas/alertas.component";
+import { ValorCoperComponent } from "./valor-coper/valor-coper.component"
 
 
 
@@ -201,6 +202,20 @@ const routes: Routes = [
         },
         component: ReportesComponent,
       },
+      {
+        path: 'valor-coper',
+        data: {
+          title: 'ValorCoper',
+          breadcrumbs: [
+            {
+              text: 'ValorCoper',
+              active: true,
+            }
+          ],
+        },
+        component: ValorCoperComponent,
+      },
+      
      ],
   },
 

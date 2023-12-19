@@ -40,7 +40,7 @@ export class AcuerdosComponent {
     },
     {
       id: 2,
-      tipoDocumento: 'Opinión Técnica',
+      tipoDocumento: 'Opinión técnica',
       tipoFirma: true,
       firmaElectronica: false,
       firma: true,
@@ -139,7 +139,7 @@ export class AcuerdosComponent {
 
   guardarOpinionTecnica() {
     this.showEditar = false;
-    this.toastrService.success("Se guardó correctamente la opinión técnica");
+    this.toastrService.success("Se guardó correctamente la opinión técnica.");
 
   }
 
@@ -224,7 +224,7 @@ export class AcuerdosComponent {
      //VALIDAR CAMPO OBSERVACIONES NO ESTE VACIO
      this.documentoNombre = documento;
      let mensaje = `¿Estas seguro que quieres eliminar el documento ${this.documentoNombre}?`;
-     let titulomsm = `Se eliminó correctamente el ${this.documentoNombre}`;
+     let titulomsm = `Se eliminó correctamente el ${this.documentoNombre}.`;
      this.confirmarModalService.abriraModal(mensaje).subscribe(result => {
        if (result) {
          // El usuario aceptó

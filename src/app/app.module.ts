@@ -11,6 +11,7 @@ import { ProlongaSesionComponent } from './shared/prolonga-sesion/prolonga-sesio
 import { ToastrModule } from 'ngx-toastr';
 import { InterceptorService } from './services/interceptors/interceptor.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,

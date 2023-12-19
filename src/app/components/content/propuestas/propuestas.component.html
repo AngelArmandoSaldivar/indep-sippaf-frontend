@@ -57,20 +57,20 @@
             <table class="table table-hover">
                 <thead>
                     <tr class="table-secondary">
-                        <th style="width: 40%;">Id Propuesta</th>
+                        <th style="width: 40%;">Id propuesta</th>
                         <th style="width: 40%;">Acreditado</th>
-                        <th style="width: 40%;">Fecha recepcion</th>
+                        <th style="width: 40%;">Fecha recepción</th>
                         <th style="width: 40%;">Fecha propuesta</th>
                         <th style="width: 40%;">Tipo propuesta</th>
                         <th style="width: 40%;">Monto MXN</th>
                         <th style="width: 40%;">Monto USD</th>
-                        <th style="width: 40%;">Propuesta Dacion</th>
+                        <th style="width: 40%;">Propuesta dación</th>
                         <th style="width: 20%;">Pagos</th>
-                        <th style="width: 40%;">Plazo Solicitado</th>
+                        <th style="width: 40%;">Plazo solicitado</th>
                         <th style="width: 20%;">Capturista</th>
                         <th style="width: 40%;">Fecha captura</th>
-                        <th style="width: 40%;">Id Responsable caso</th>
-                        <th style="width: 40%;">N° Volante</th>
+                        <th style="width: 40%;">Id responsable caso</th>
+                        <th style="width: 40%;">Número volante</th>
                         <th style="width: 10%;">Estatus</th>
                         <th style="width: 30%;">Tiempo atención</th>
                     </tr>
@@ -114,22 +114,35 @@
         <sg-juridico *ngIf="Seleccionado === 4" (respuestaCofirmarModal)="respuestaCofirmarModal($event)"></sg-juridico>
         <sg-capa *ngIf="Seleccionado == 5" (respuestaCofirmarModal)="respuestaCofirmarModal($event)"></sg-capa>
         <sg-siab *ngIf="Seleccionado == 6"></sg-siab>
-        <sg-coper *ngIf="Seleccionado == 8" (respuestaCofirmarModal)="respuestaCofirmarModal($event)"></sg-coper>
-        <sg-acuerdos *ngIf="Seleccionado == 9" ></sg-acuerdos>
+        <sg-analisis *ngIf="Seleccionado == 7"></sg-analisis>
+        <sg-coper *ngIf="Seleccionado == 8"></sg-coper>
+        <sg-acuerdos *ngIf="Seleccionado == 9" (respuestaCofirmarModal)="respuestaCofirmarModal($event)"></sg-acuerdos>
+
     </div>
     <div class="offcanvas-footer">
         <div class="text-end">
-            <button type="button" class="btn btn-positivo-modal"  (click)="openOficio()" *ngIf="Seleccionado == 1">Generar Oficio&nbsp;<em class="bi bi-pencil"></em> </button> &nbsp;&nbsp;
+            <button type="button" class="btn btn-positivo-modal"  (click)="openOficio()" *ngIf="Seleccionado == 1">Generar oficio&nbsp;<em class="bi bi-filter-square"></em> </button> &nbsp;&nbsp;
 
-            <button type="button" class="btn btn-success"  (click)="completar('detalle')" *ngIf="Seleccionado != 1 && Seleccionado != 3 && Seleccionado != 6 && Seleccionado != 7 && Seleccionado != 8">Completar&nbsp;<em class="bi bi-pencil"></em> </button> &nbsp;&nbsp;
-            <button type="button" class="btn btn-warning" (click)="respuestaCofirmarModal(true)" *ngIf="Seleccionado != 1 && Seleccionado != 3 && Seleccionado != 7">Guardar&nbsp;<em class="bi bi-save"></em></button>&nbsp;  
-            <button type="button" class="btn btn-neutral-modal"  (click)="capturar('abrir')" *ngIf="Seleccionado != 1 && Seleccionado != 2 && Seleccionado != 3 && Seleccionado != 6 && Seleccionado != 7 && Seleccionado != 8 && Seleccionado != 9">Capturar&nbsp;<em class="bi bi-pencil"></em> </button> &nbsp;&nbsp;
             <button type="button" class="btn btn-neutral-modal"  (click)="editar()" *ngIf="Seleccionado == 1 && selectPerfil != 3">Editar&nbsp;<em class="bi bi-pencil"></em> </button> &nbsp;&nbsp;            
+
+            <button type="button" class="btn btn-success"  (click)="confirmarCOPER()" *ngIf="Seleccionado == 9">Completar&nbsp;<em class="bi bi-check-circle"></em> </button> &nbsp;&nbsp;
+            
             <button type="button" class="btn btn-warning"  (click)="confimarPropuesta()" *ngIf="Seleccionado == 1">Guardar&nbsp;<em class="bi bi-save"></em> </button> &nbsp;&nbsp;
 
-            <button type="button" class="btn btn-success"  (click)="completar('detalle')" *ngIf="Seleccionado != 1 && Seleccionado != 2 && Seleccionado != 3 && Seleccionado != 6 && Seleccionado != 7 && Seleccionado != 9">Completar&nbsp;<em class="bi bi-pencil"></em> </button> &nbsp;&nbsp;
-            <button type="button" class="btn btn-warning" (click)="respuestaCofirmarModal(true)" *ngIf="Seleccionado != 1 && Seleccionado != 3 && Seleccionado != 7 && Seleccionado != 9">Guardar&nbsp;<em class="bi bi-save"></em></button>&nbsp;  
-            <button type="button" class="btn btn-neutral-modal"  (click)="capturar('abrir')" *ngIf="Seleccionado != 1 && Seleccionado != 3 && Seleccionado != 6 && Seleccionado != 7 && Seleccionado != 9">Capturar&nbsp;<em class="bi bi-pencil"></em> </button> &nbsp;&nbsp;
+            <button type="button" class="btn btn-success" (click)="respuestaCofirmarModal(true)" *ngIf=" Seleccionado == 2">Completar Tarea&nbsp;<em class="bi bi-check-circle"></em></button>&nbsp;
+
+            <button type="button" class="btn btn-warning"  (click)="confimarPropuesta()" *ngIf="Seleccionado == 2"> Guardar&nbsp;<em class="bi bi-save"></em> </button> &nbsp;&nbsp;
+
+            <button type="button" class="btn btn-success" (click)="respuestaCofirmarModal(true)" *ngIf=" Seleccionado == 3">Completar Tarea&nbsp;<em class="bi bi-check-circle"></em></button>&nbsp;
+
+            <button type="button" class="btn btn-warning"  (click)="confimarPropuesta()" *ngIf="Seleccionado == 3">Guardar&nbsp;<em class="bi bi-save"></em> </button> &nbsp;&nbsp;
+
+            <button type="button" class="btn btn-success"  (click)="completar('detalle')" *ngIf="Seleccionado != 1 && Seleccionado != 2 && Seleccionado != 3 && Seleccionado != 6 && Seleccionado != 7 && Seleccionado != 8 && Seleccionado != 9">Completar&nbsp;<em class="bi bi-check-circle"></em> </button> &nbsp;&nbsp; 
+
+            <button type="button" class="btn btn-warning" (click)="respuestaCofirmarModal(true)" *ngIf=" Seleccionado != 1 && Seleccionado != 2 && Seleccionado != 3  && Seleccionado != 7">Guardar&nbsp;<em class="bi bi-save"></em></button>&nbsp;  
+            
+            <button type="button" class="btn btn-neutral-modal"  (click)="capturar('abrir')" *ngIf="Seleccionado != 1 && Seleccionado != 2 && Seleccionado != 3 && Seleccionado != 6 && Seleccionado != 7 && Seleccionado != 8 && Seleccionado != 9">Capturar&nbsp;<em class="bi bi-pencil"></em> </button> &nbsp;&nbsp;
+            
         </div>
     </div>
 </div>
@@ -150,13 +163,13 @@
                 <div class="col-sm-6">
                     <label for="seccionAdd" class="control-label"></label>
                     <select class="form-select" aria-label="Default select example" id="seccionAdd">
-                        <option>Selecciona Acreditado</option>
-                        <option >001 Juan Perez </option>
-                        <option >002 Cristina Leon </option>
+                        <option>Selecciona acreditado</option>
+                        <option >001 Juan Pérez </option>
+                        <option >002 Cristina León </option>
                     </select>
                 </div>
                 <div class="col-sm-6">  
-                    <label for="seccionAdd" class="control-label">Pago o Compra</label>
+                    <label for="seccionAdd" class="control-label">Pago/Compra</label>
                     <select class="form-select" aria-label="Default select example" id="seccionAdd">
                         <option selected></option>
                         <option value="1">Pago</option>
@@ -164,58 +177,58 @@
                     </select>
                 </div>
                 <div class="col-sm-6">
-                    <label for="fecharecepcion" class="control-label">Fecha de recepcion en el INDEP</label>
-                    <input type="text" class="form-control" id="fecharecepcion" placeholder="fecha de recepcion">
+                    <label for="fecharecepcion" class="control-label">Fecha de recepción en el INDEP</label>
+                    <input type="text" class="form-control" id="fecharecepcion" placeholder="Fecha de recepción">
                 </div>
                 <div class="col-sm-6">
                     <label for="remitente" class="control-label">Remitente de propuesta</label>
                     <input type="text" class="form-control" id="remitente" placeholder="Remitente">
                 </div>
                 <div class="col-sm-6">
-                    <label for="fecharecepcion" class="control-label">Fecha recepcion de coordinación de recuperación de cartera y activos</label>
-                    <input type="text" class="form-control" id="fecharecepcion" placeholder="fecha de recepcion">
+                    <label for="fecharecepcion" class="control-label">Fecha recepción de coordinación de recuperación de cartera y activos</label>
+                    <input type="text" class="form-control" id="fecharecepcion" placeholder="Fecha de recepción">
                 </div>
                 <div class="col-sm-6">
                     <label for="montoletraMXN" class="control-label">Monto de propuesta con letra pesos</label>
                     <input type="text" class="form-control" id="montoletraMXN" placeholder="Monto letra">
                 </div>
                 <div class="col-sm-6">
-                    <label for="fechaDocumento" class="control-label">Fecha Documento</label>
-                    <input type="text" class="form-control" id="fechaDocumento" placeholder="fecha de documento">
+                    <label for="fechaDocumento" class="control-label">Fecha documento</label>
+                    <input type="text" class="form-control" id="fechaDocumento" placeholder="Fecha de documento">
                 </div>
                 <div class="col-sm-6">
-                    <label for="montoletraUSD" class="control-label">Monto de propuesta con letra dolares</label>
-                    <input type="text" class="form-control" id="montoletraUSD" placeholder="monto letra">
+                    <label for="montoletraUSD" class="control-label">Monto de propuesta con letra dólares</label>
+                    <input type="text" class="form-control" id="montoletraUSD" placeholder="Monto letra">
                 </div>
                 <div class="col-sm-6">
-                    <label for="tipocartera" class="control-label">Tipo cartera automatico del acreditado</label>
+                    <label for="tipocartera" class="control-label">Tipo cartera automático del acreditado</label>
                     <select class="form-select" aria-label="Default select example" id="tipoCartera">
                         <option selected></option>
-                        <option value="1">crediticia de consumo</option>
-                        <option value="2">crediticia comercial</option>
-                        <option value="3">crediticia de vivienda</option>
+                        <option value="1">Crediticia de consumo</option>
+                        <option value="2">Crediticia comercial</option>
+                        <option value="3">Crediticia de vivienda</option>
                     </select>
                     
                 </div>
                 
                 <div class="col-sm-6">
-                    <label for="plazo" class="control-label">Plazo Solicitado</label>
+                    <label for="plazo" class="control-label">Plazo solicitado</label>
                     <input type="text" class="form-control" id="plazo" placeholder="Plazo solicitado">
                 </div>
 
                 <div class="col-sm-6">
                     <label for="montoMXN" class="control-label">Monto de propuesta pesos</label>
-                    <input type="text" class="form-control" id="montoMXN" placeholder="monto MXN">
+                    <input type="text" class="form-control" id="montoMXN" placeholder="Monto MXN">
                 </div>
 
                 <div class="col-sm-6">
-                    <label for="volante" class="control-label">Numero de volante</label>
-                    <input type="text" class="form-control" id="volante" placeholder="Numero volante">
+                    <label for="volante" class="control-label">Número de volante</label>
+                    <input type="text" class="form-control" id="volante" placeholder="Número volante">
                 </div>
 
                 <div class="col-sm-6">
-                    <label for="montoUSD" class="control-label">Monto de propuesta dolares</label>
-                    <input type="text" class="form-control" id="montoUSD" placeholder="monto USD">
+                    <label for="montoUSD" class="control-label">Monto de propuesta dólares</label>
+                    <input type="text" class="form-control" id="montoUSD" placeholder="Monto USD">
                 </div>
 
                 <div class="col-sm-6">
@@ -283,11 +296,11 @@
                         </div>
 
                         <div class="col-md-12">
-                            <label for="cedula" class="control-label">Cargar Cedula</label>
+                            <label for="cedula" class="control-label">Cargar cédula</label>
                             <div class="input-group">
-                                <label for="cedula" class="control-label" style="display: none" >Cargar Cedula</label>
+                                <label for="cedula" class="control-label" style="display: none" >Cargar cédula</label>
                                 <input class="form-control" type="text" placeholder="Ubicación de la cédula" name="cedula" id="cedula" size="25" readonly="readonly" value="{{cedulaFileName}}" disabled>
-                                <label for="fileCedula" class="control-label" style="display: none" >Cargar Cedula</label>
+                                <label for="fileCedula" class="control-label" style="display: none" >Cargar cédula</label>
                                 <input type="file" style="display: none" id="fileCedula" accept=".pdf" (change)="onCedulaFileChange($event)" formControlName="key">
                                 <span class="input-group-btn" style="vertical-align: bottom">
                                 <button type="button" class="btn btn-secundary" id="btnCedula" name="btnCedula" onclick="document.getElementById('fileCedula').click();">Buscar</button>
@@ -296,7 +309,7 @@
                         </div>
 
                         <div class="col-md-12">
-                            <label for="otro" class="control-label">Cargar Otro</label>
+                            <label for="otro" class="control-label">Cargar otro</label>
                             <div class="input-group">
                                 <label for="otro" class="control-label" style="display: none" >Cargar otro</label>
                                 <input class="form-control" type="text" placeholder="Ubicación de otro" name="otro" id="otro" size="25" readonly="readonly" value="{{otroFileName}}" disabled>

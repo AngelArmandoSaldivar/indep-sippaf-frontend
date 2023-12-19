@@ -56,11 +56,11 @@ export class CatalogosComponent {
         { idCatalogo: 0, descripcion: 'Selecciona', activo: false},
         { idCatalogo: 1, descripcion: 'Motivo llamada', activo: false },
         { idCatalogo: 2, descripcion: 'Grupo económico', activo: false },
-        { idCatalogo: 3, descripcion: 'Estatus Propuesta', activo: false },
-        { idCatalogo: 4, descripcion: 'Organización Social', activo: false },
-        { idCatalogo: 5, descripcion: 'Número de Póliza', activo: false },
+        { idCatalogo: 3, descripcion: 'Estatus propuesta', activo: false },
+        { idCatalogo: 4, descripcion: 'Organización social', activo: false },
+        { idCatalogo: 5, descripcion: 'Número de póliza', activo: false },
         { idCatalogo: 6, descripcion: 'Remitentes', activo: false },
-        { idCatalogo: 7, descripcion: 'Unidades Administrativas', activo: false },
+        { idCatalogo: 7, descripcion: 'Unidades administrativas', activo: false },
     ]
   }
 
@@ -74,14 +74,14 @@ export class CatalogosComponent {
     this.showAgregarCatalogo = true;
   }
   guadarArchivo() {
-    this.toastrService.success('Se ha guardado exitosamente el nuevo registro')
+    this.toastrService.success('Se ha guardado exitosamente el nuevo registro.')
     this.showAgregarCatalogo = false;
   }
   EditarCatalogo() {
     this.showEditarCatalogo = true;
   }
   actualizarcatalogo() {
-    this.toastrService.success('Se ha actualizado exitosamente el registro')
+    this.toastrService.success('Se ha actualizado exitosamente el registro.')
     this.showEditarCatalogo = false;
   }
 
@@ -90,7 +90,7 @@ export class CatalogosComponent {
       if (result) {
         // El usuario aceptó
         this.showCamvasPrincipal = false;
-        this.toastrService.success("Se ha eliminado exitosamente el registro");
+        this.toastrService.success("Se ha eliminado exitosamente el registro.");
   
       }
 
@@ -161,15 +161,15 @@ export class CatalogosComponent {
       this.listaRegistros = [
         {
           idRegistro:'001',
-          descripcionReg:'Estatus Propuesta 1'
+          descripcionReg:'Estatus propuesta 1'
       },
       {
           idRegistro:'002',
-          descripcionReg:'Estatus Propuesta 2'
+          descripcionReg:'Estatus propuesta 2'
       },
       {
           idRegistro:'003',
-          descripcionReg:'Estatus Propuesta 3'
+          descripcionReg:'Estatus propuesta 3'
       }
     ];
     }
@@ -177,15 +177,15 @@ export class CatalogosComponent {
       this.listaRegistros = [
         {
           idRegistro:'001',
-          descripcionReg:'Organización Social 1'
+          descripcionReg:'Organización social 1'
       },
       {
           idRegistro:'002',
-          descripcionReg:'Organización Social 2'
+          descripcionReg:'Organización social 2'
       },
       {
           idRegistro:'003',
-          descripcionReg:'Organización Social 3'
+          descripcionReg:'Organización social 3'
       }
     ];
     }
@@ -193,15 +193,15 @@ export class CatalogosComponent {
       this.listaRegistros = [
         {
           idRegistro:'001',
-          descripcionReg:'Número de Póliza 1'
+          descripcionReg:'Número de póliza 1'
       },
       {
           idRegistro:'002',
-          descripcionReg:'Número de Póliza 2'
+          descripcionReg:'Número de póliza 2'
       },
       {
           idRegistro:'003',
-          descripcionReg:'Número de Póliza 3'
+          descripcionReg:'Número de póliza 3'
       }
     ];
     }
@@ -225,15 +225,15 @@ export class CatalogosComponent {
       this.listaRegistros = [
         {
           idRegistro:'001',
-          descripcionReg:'Unidades Administrativas 1'
+          descripcionReg:'Unidades administrativas 1'
       },
       {
           idRegistro:'002',
-          descripcionReg:'Unidades Administrativas 2'
+          descripcionReg:'Unidades administrativas 2'
       },
       {
           idRegistro:'003',
-          descripcionReg:'Unidades Administrativas 3'
+          descripcionReg:'Unidades administrativas 3'
       }
     ];
     }

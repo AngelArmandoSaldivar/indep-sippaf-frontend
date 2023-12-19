@@ -1,0 +1,66 @@
+<div class="col-sm-12">
+    <div class="card">
+        <div class="card-body row" style="padding: 0px 5px;">
+            <div class="row mb-2">
+                <div class="col-12 mb-4">
+                    <h2>Registro de sesiones COPER</h2>
+                    <p>Deberás volver a ingresar tu contraseña para poder actualizar este valor</p>
+                    <hr class="red">
+                </div>
+            
+                <div class="col-md-4">
+                    Valor del COPER:
+                </div>
+
+                <div class="col-md-4">
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="col-sm-12 text-end">
+                    <button type="button" class="btn btn-outline btn-primary" (click)="validarContrasena()" >Guardar&nbsp;<em class="bi bi-save"></em></button>&nbsp;  
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="offcanvas offcanvas-end canvasSecundario" [class.show]="showValidarContrasena" ngtabindex="-1"
+    id="offcanvasValidar" aria-label="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h1>Valida tú Contraseña</h1>
+            <button class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
+                (click)="cerrarCanvas()">Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="card-body row">
+                        <div class="col-md-12">
+                            <h4 class="text-center">Ingresa tu contraseña para continuar</h4>
+
+
+                            <div class="row mb-2">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <input type="password" class="form-control" placeholder="Contraseña..." >
+                                </div>
+                            </div>
+
+                            <div class="text-end">
+                                <div class="text-end">
+                                    <button type="button" class="btn btn-positivo-modal bonton-central" (click)="validar()">
+                                        Validar
+                                      </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+</div>

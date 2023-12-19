@@ -8,7 +8,7 @@
         <div class="col-md-12">
             <div class="row mb-2">
                 <div class="col-md-4">
-                    Fecha Asignada:
+                    Fecha asignada:
                 </div>
                 <div class="col-md-4">
                     <input type="date" class="form-control">
@@ -24,7 +24,7 @@
             </div>
             <div class="row mb-2">
                 <div class="col-md-4">
-                    Fecha de presentación a Órgano Colegiado
+                    Fecha de presentación a órgano colegiado
                 </div>
                 <div class="col-md-4">
                     <input type="date" class="form-control">
@@ -32,7 +32,7 @@
             </div>
             <div class="row mb-2">
                 <div class="col-md-4">
-                    Canal de Solución
+                    Canal de solución
                 </div>
                 <div class="col-md-4">
                     <select class="form-select" id="">
@@ -45,7 +45,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    Fecha de Vencimiento
+                    Fecha de vencimiento
                 </div>
                 <div class="col-md-4">
                     <input type="date" class="form-control">
@@ -66,7 +66,7 @@
                         <option value="5">Asunto liquidado</option>
                         <option value="6">Aprobado</option>
                         <option value="7">Rechazado</option>
-                        <option value="8">Atendido Vencido</option>
+                        <option value="8">Atendido vencido</option>
                         <option value="9">Cartera vendida</option>
                         <option value="10">Bienes adjudicados</option>
                         <option value="11">En aclaración</option>
@@ -91,7 +91,7 @@
             <table class="table table-striped">
             <thead>
                 <tr>
-                <th>Comprobante del Pago</th>
+                <th>Comprobante del pago</th>
                 <th>Acciones</th>
                 </tr>
             </thead>
@@ -129,7 +129,7 @@
 <div class="offcanvas offcanvas-end canvasSecundario" [class.show]="showAgregarDocumento" ngtabindex="-1"
     id="offcanvasDocumento" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Agregar Comprobante de Pago</h1>
+        <h1>Agregar comprobante de pago</h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="cerrarCanvas('documento')"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
@@ -138,10 +138,10 @@
             <div class="row">                 
                 <div class="card-body row" style="padding: 15px 15px;">                
                     <div class="col-md-6">
-                        <label for="documento" class="control-label">Cargar Documento</label>
+                        <label for="documento" class="control-label">Cargar documento</label>
                         <div class="input-group">
                             <input class="form-control" type="text" placeholder="Ubicación del documento" name="documento" id="documento" size="25" readonly="readonly" value="{{documentoFileName}}" disabled>
-                            <label for="fileDocumento" class="control-label" style="display: none" >Cargar Documento</label>
+                            <label for="fileDocumento" class="control-label" style="display: none" >Cargar documento</label>
                             <input type="file" style="display: none" id="fileDocumento" accept=".pdf" (change)="onDocumentoFileChange($event)" formControlName="key">
                             <span class="input-group-btn" style="vertical-align: bottom">
                             <button type="button" class="btn btn-secundary" id="btnDocumento" name="btnDocumento" onclick="document.getElementById('fileDocumento').click();">Buscar</button>

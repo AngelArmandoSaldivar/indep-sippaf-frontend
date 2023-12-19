@@ -3,7 +3,7 @@ export const datosAcreditado = {
     noCliente: 261456,
     fechaDocumento: '20/01/2022',
     encomienda: 'BANCOMEXT',
-    personasRelacionadas: 'Juan Perez',
+    personasRelacionadas: 'Juan Pérez',
     sucursal: 'Insurgentes Norte   ',
     seguimiento: 'Roberto Palasuelos',
     calle: 'Insurgentes Norte',

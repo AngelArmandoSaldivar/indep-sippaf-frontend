@@ -33,7 +33,6 @@ export class ReportesComponent {
   opcion: number = 0;
   btnExport: boolean = false;
 
-
   constructor(
     public toastrService: ToastrService
   ) {       

@@ -39,7 +39,7 @@ export class BitacoraComponent {
     {
       Propuesta:'Compra',
       idPropuesta: '002',
-      Acreditado: 'Maria Rodrigez',
+      Acreditado: 'María Rodríguez',
       Estatus: 'Pendiente'  
     },
     {
@@ -66,7 +66,7 @@ export class BitacoraComponent {
     const fechaFinDate = new Date(this.fFin);
 
     if (fechaInicioDate > fechaFinDate) {
-      this.toastrService.error('La fecha de inicio no puede ser mayor a la fecha final');
+      this.toastrService.error('La fecha de inicio no puede ser mayor a la fecha final.');
       this.fInicio='';
       this.fFin='';
     }

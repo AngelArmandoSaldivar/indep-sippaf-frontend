@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { dataArchivos, dataSeccion, dataFiles } from './dataDummyArchivos';
+import { Dataarchivos, Dataseccion, Datafiles } from './dataDummyArchivos';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -8,43 +8,40 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./admin-archivos.component.scss']
 })
 export class AdminArchivosComponent {
-  seccion: string = 'Elige una opción';
-  secciones = dataSeccion;
+  Seccion: string = 'Elige una opción';
+  Secciones = Dataseccion;
 
-  archivo: string = 'Elige una opción';
-  archivos: any = dataFiles;
+  Archivo: string = 'Elige una opción';
+  Archivos: any = Datafiles;
 
-  dataTablaArchivos = dataArchivos;
+  Datatablaarchivos = Dataarchivos;
 
-  
+  Showagregararchivo: boolean = false;
 
-  showAgregarArchivo: boolean = false;
-
-
-  mostrarTabla: boolean = false;
+  Mostrartabla: boolean = false;
 
 
   constructor(
     private toastrService : ToastrService,
   ) {}
-  changeSeccion() {}
+  Changeseccion() {}
 
-  changeSubseccion() {}
+  Changesubseccion() {}
 
-  changeArchivos() {}
+  Changearchivos() {}
 
-  busquedaArchivos() {
-    this.mostrarTabla = true;
+  Busquedaarchivos() {
+    this.Mostrartabla = true;
   }
 
-  agregarArchivo() {
-    this.showAgregarArchivo = true;
+  Agregararchivo() {
+    this.Showagregararchivo = true;
   }
 
-  cerrarOffCanvas( numero: number) {
+  Cerraroffcanvas( numero: number) {
     switch (numero) {
       case 1:
-        this.showAgregarArchivo = false;
+        this.Showagregararchivo = false;
         break;
     
       default:
@@ -54,9 +51,9 @@ export class AdminArchivosComponent {
     
   }
 
-  guadarArchivo() {
+  Guardararchivo() {
     this.toastrService.success('Se ha guardado exitosamente el nuevo archivo')
-    this.showAgregarArchivo = false;
+    this.Showagregararchivo = false;
   }
   
 

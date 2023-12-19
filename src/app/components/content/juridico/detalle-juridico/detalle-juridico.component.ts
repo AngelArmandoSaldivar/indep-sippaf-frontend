@@ -41,7 +41,7 @@ export class DetalleJuridicoComponent {
     this.dataAnexos = [
       {
         id: 1,
-        name: "Cedula Juridica",
+        name: "Cedula jurídica",
       },
       {
         id: 2,
@@ -49,7 +49,7 @@ export class DetalleJuridicoComponent {
       },
       {
         id: 4,
-        name: "Oficio Solicitud",
+        name: "Oficio solicitud",
       },
       {
         id: 5,
@@ -59,7 +59,7 @@ export class DetalleJuridicoComponent {
     this.dataDocumentos = [
       {
         id: 1,
-        name: "Solicitud Información",
+        name: "Solicitud información",
       },
       {
         id: 2,
@@ -67,7 +67,7 @@ export class DetalleJuridicoComponent {
       },
       {
         id: 3,
-        name: "Oficio Solicitud",
+        name: "Oficio solicitud",
       },
       {
         id: 4,
@@ -212,8 +212,7 @@ export class DetalleJuridicoComponent {
     this.toastrService.success('Se ha descargado correctamente el anexo.')
   }
 
-  descargarDocumento(documentoNombre: string = '', accion: string) {
-    console.log("DESCARGAR DOCUMENTO");
+  descargarDocumento(documentoNombre: string = '', accion: string) {    
   }
 
   sustituirDocumento() {

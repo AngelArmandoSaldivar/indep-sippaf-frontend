@@ -141,11 +141,11 @@ export class AtencionesComponent {
       this.acre='Juan Pérez';
       this.encomienda= 'BANCOMEXT';
       this.direccion= 'Chalco';
-      this.estadoymuni='Edo. Mex';
-      this.muni='chalco';
+      this.estadoymuni='Estado de México';
+      this.muni='Chalco';
       this.ntel='4435678765';
       this.correo='andrea@gmail.com'; 
-      this.ninteres='Juan Perez Lopez'
+      this.ninteres='Juan Pérez López'
     }
   }
 
@@ -154,30 +154,32 @@ export class AtencionesComponent {
 
     this.listaDatos = [{
       fecha: '01/05/2022',
-      elaboro: 'Cristina Leon',
+      elaboro: 'Cristina León',
       noCliente: '261456',
       acreditado: 'Juan Pérez',
       encomienda: 'BANCOMEXT',
       direccion: 'Chalco',
-      estadoymuni:'Edo. Mex, chalco',
+      estadoymuni:'Estado de México',
+      muni:'Chalco',
       telefono:'5584418748',
       correo:'andrea@gmail.com',
-      asunto:'atencion de acreditado',
+      asunto:'atención de acreditado',
       medioatencion:'email',
       montopropuesta:'10000',
       tipopropuesta:'prueba',
     },
     {
       fecha: '01/05/2022',
-      elaboro: 'Janeth Martinez',
+      elaboro: 'Janeth Martínez',
       noCliente: '261621',
-      acreditado: 'Cristina Leon',
+      acreditado: 'Cristina León',
       encomienda: 'BANCOMEXT',
       direccion: 'Chalco',
-      estadoymuni:'Edo. Mex, chalco',
+      estadoymuni:'Estado de México',
+      muni:'Chalco',
       telefono:'5584418748',
       correo:'andrea@gmail.com',
-      asunto:'atencion de acreditado',
+      asunto:'atención de acreditado',
       medioatencion:'email',
       montopropuesta:'10000',
       tipopropuesta:'prueba',
@@ -222,7 +224,7 @@ export class AtencionesComponent {
     const fechaFinDate = new Date(this.fFin);
 
     if (fechaInicioDate > fechaFinDate) {
-      this.toastrService.error('La fecha de inicio no puede ser mayor a la fecha final');
+      this.toastrService.error('La fecha de inicio no puede ser mayor a la fecha final.');
       this.fInicio='';
       this.fFin='';
     }

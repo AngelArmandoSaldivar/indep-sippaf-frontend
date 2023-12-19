@@ -1,0 +1,92 @@
+.visualizacion{
+    width: 98%;
+      height: 300px;
+      border-collapse: separate;
+  }
+  
+  .content-radio {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  label {
+      font-weight: bolder;
+  }
+  
+  span {
+      font-weight: normal;
+  }
+  
+  .div-button {
+      display: flex;
+      justify-content: start;
+  }
+  
+  .mr-1 {
+      margin-right: 1rem;
+  }
+  
+  .mt-1 {
+      margin-top: 1;
+  }
+  
+  .ml-1 {
+    margin-left: 1rem;
+  }
+  
+  .ul-style {
+      color: #000 !important;
+  }
+  
+  .nav-link {
+      color: black !important;
+  }
+  
+  .nav-link:hover {
+      color: #d8b133 !important;
+      cursor: pointer;
+  }
+  
+  
+  .nav-link.active {
+      color: #9d2449 !important;
+  
+  }
+  
+  p {
+      margin: 0px;
+  }
+  
+  .card-container {
+      min-height: 300px !important;
+      max-height: 300px !important;
+      transition: box-shadow 0.3s ease; /* Transición para la sombra */
+  }
+  
+  .card-container:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Aplica la sombra al pasar el mouse */
+  }
+  
+  
+  h1{
+      margin-bottom: 0px;
+  }
+  
+  .bajar{
+      z-index: 1;
+  }
+  
+  .btn-link:hover {
+      color: #9d2449
+  }
+  
+  
+  

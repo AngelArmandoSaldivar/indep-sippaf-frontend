@@ -1,29 +1,29 @@
 export const dataArchivos = [
     {
         id: 1,
-        seccion: 'Persona Física',
+        seccion: 'Persona física',
         subseccion: 'Documentos persona física',
         archivo: 'Documento CURP',
         e_firma: true,
     },
     {
         id: 2,
-        seccion: 'Persona Moral',
+        seccion: 'Persona moral',
         subseccion: 'Documentos socios',
         archivo: 'Última declaración anual',
         e_firma: false,
     },
     {
         id: 3,
-        seccion: 'Opinión Técnica',
-        subseccion: 'Docuentos Representante Legal',
-        archivo: 'Comprobante de Domicilio',
+        seccion: 'Opinión técnica',
+        subseccion: 'Docuentos representante legal',
+        archivo: 'Comprobante de domicilio',
         e_firma: true,
     },
     {
         id: 4,
-        seccion: 'Persona Física',
-        subseccion: 'Documentos de la Persona Física',
+        seccion: 'Persona física',
+        subseccion: 'Documentos de la persona física',
         archivo: 'Documento RFC',
         e_firma: true,
     },
@@ -31,12 +31,12 @@ export const dataArchivos = [
 export const dataAcreditados = [
     {
         id: 1,
-        tx_descripcion: 'Cristina Leon',
+        tx_descripcion: 'Cristina León',
         tx_ubicaarchivo: 'CL'
     },
     {
         id: 2,
-        tx_descripcion: 'Juan Perez',
+        tx_descripcion: 'Juan Pérez',
         tx_ubicaarchivo: 'JP'
     },
 ];
@@ -127,16 +127,16 @@ export const dataEdosmunis = [
 export const dataAsuntos = [
     {
         id: 1,
-        tx_descripcion: 'Asunto1',
+        tx_descripcion: 'Asunto 1',
         tx_ubicaarchivo: 'A1'
     },
     {
         id: 2,
-        tx_descripcion: 'Asunto2',
+        tx_descripcion: 'Asunto 2',
         tx_ubicaarchivo: 'A2'
     }, {
         id: 3,
-        tx_descripcion: 'Asunto3',
+        tx_descripcion: 'Asunto 3',
         tx_ubicaarchivo: 'A3'
     }, 
 ]
@@ -150,7 +150,7 @@ export const dataMedios = [
     },
     {
         id: 2,
-        tx_descripcion: 'Telefono',
+        tx_descripcion: 'Teléfono',
         tx_ubicaarchivo: 'T'
     },
 ];
@@ -158,12 +158,12 @@ export const dataMedios = [
 export const dataTipopropuestas = [
     {
         id: 1,
-        tx_descripcion: 'Propuesta1',
+        tx_descripcion: 'Propuesta 1',
         tx_ubicaarchivo: 'p1'
     },
     {
         id: 2,
-        tx_descripcion: 'Propuesta2',
+        tx_descripcion: 'Propuesta 2',
         tx_ubicaarchivo: 'p2'
     },
 ];

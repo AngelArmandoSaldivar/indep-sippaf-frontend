@@ -65,10 +65,10 @@ export class PropuestasComponent {
       { indice: 1, titulo: 'Validación', activo: false, title: '', noReg: 14 },
       { indice: 2, titulo: 'SIARAF', activo: false, title: '', noReg: 30 },
       { indice: 3, titulo: 'SAEDG', activo: false, title: '', noReg: 0 },
-      { indice: 4, titulo: 'Juridico', activo: false, title: '', noReg: 15 },
+      { indice: 4, titulo: 'Jurídico', activo: false, title: '', noReg: 15 },
       { indice: 5, titulo: 'CAPA', activo: false, title: '', noReg: 1 },
       { indice: 6, titulo: 'SIGEBI', activo: false, title: '', noReg: 0 },
-      { indice: 7, titulo: 'Analisis', activo: false, title: '', noReg: 5 },
+      { indice: 7, titulo: 'Análisis', activo: false, title: '', noReg: 5 },
       { indice: 8, titulo: 'COPER', activo: false, title: '', noReg: 15 },
       { indice: 9, titulo: 'Acuerdos', activo: false, title: '', noReg: 3 }
     ]
@@ -120,7 +120,7 @@ export class PropuestasComponent {
   // SI AL FINAL CONFIRMA  EL ULTIMO MODAL ENTONCES CERRAMOS TODO, INCLUIDO EL CAMVAS ACTUAL Y ACTUALIZAMOS  LOS DATOS DEL ESTATUS DONDE ESTEMOS
   respuestaCofirmarModal(respuesta: boolean) {
     if (respuesta) this.cerrarCamvasPrincipal();
-    this.toastrService.success('Se ha guardado exitosamente el resgistro.')    
+    this.toastrService.success('Se ha guardado exitosamente el registro.')    
   }
 
   //######################## FIN  FUNCIONES  OBLIGATORIAS ###################################
@@ -152,7 +152,7 @@ export class PropuestasComponent {
         break;
       }
       case 4: {
-        this.tituloSeleccionado = 'Juridico';
+        this.tituloSeleccionado = 'Jurídico';
         break;
       }
       case 5: {
@@ -164,7 +164,7 @@ export class PropuestasComponent {
         break;
       }
       case 7: {
-        this.tituloSeleccionado = 'Analisis';
+        this.tituloSeleccionado = 'Análisis';
         break;
       }
       case 8: {
@@ -191,7 +191,7 @@ export class PropuestasComponent {
       propuestaDACION:'1,000',
       pagos:'5',
       plazaSoli:'15',
-      capturista:'Maria Rosales',
+      capturista:'María Rosales',
       fechaCaptura:'01/05/2022',
       idResponsable:'002',
       NumVolante:'001',
@@ -210,7 +210,7 @@ export class PropuestasComponent {
       propuestaDACION:'8000',
       pagos:'5',
       plazaSoli:'16',
-      capturista:'Jose Morales',
+      capturista:'José Morales',
       fechaCaptura:'01/05/2022',
       idResponsable:'007',
       NumVolante:'002',
@@ -229,7 +229,7 @@ export class PropuestasComponent {
       propuestaDACION:'1,000',
       pagos:'4',
       plazaSoli:'10',
-      capturista:'Elda Avila',
+      capturista:'Elda Ávila',
       fechaCaptura:'01/05/2022',
       idResponsable:'004',
       NumVolante:'003',
@@ -248,7 +248,7 @@ export class PropuestasComponent {
       propuestaDACION:'1,000',
       pagos:'3',
       plazaSoli:'8',
-      capturista:'Maria Rosales',
+      capturista:'María Rosales',
       fechaCaptura:'01/05/2022',
       idResponsable:'002',
       NumVolante:'004',
@@ -267,7 +267,7 @@ export class PropuestasComponent {
       propuestaDACION:'1,000',
       pagos:'5',
       plazaSoli:'10',
-      capturista:'Jose Morales',
+      capturista:'José Morales',
       fechaCaptura:'01/05/2022',
       idResponsable:'007',
       NumVolante:'005',
@@ -286,7 +286,7 @@ export class PropuestasComponent {
       propuestaDACION:'1,000',
       pagos:'6',
       plazaSoli:'6',
-      capturista:'Elda Avila',
+      capturista:'Elda Ávila',
       fechaCaptura:'01/05/2022',
       idResponsable:'004',
       NumVolante:'006',
@@ -305,7 +305,7 @@ export class PropuestasComponent {
       propuestaDACION:'1,000',
       pagos:'8',
       plazaSoli:'20',
-      capturista:'Luis Gomez',
+      capturista:'Luis Gómez  ',
       fechaCaptura:'01/05/2022',
       idResponsable:'001',
       NumVolante:'007',
@@ -348,11 +348,11 @@ export class PropuestasComponent {
     }
   }
   confimarPropuesta() {
-    this.confirmarModalService.abriraModal('Al guardar esta información se marcara como tarea completada').subscribe(result => {
+    this.confirmarModalService.abriraModal('Al guardar esta información, se marcará como tarea completada.').subscribe(result => {
       if (result) {
         // El usuario aceptó
         this.showCamvasPrincipal = false;
-        this.toastrService.success("Se guardó correctamente la información");
+        this.toastrService.success("Se guardó correctamente la información.");
   
       }
 
@@ -363,7 +363,7 @@ export class PropuestasComponent {
   }
   reportePDF() {
     const downloadLink = document.createElement('a');
-    const fileName = 'ReporteDetalle.pdf';
+    const fileName = 'Reporte detalle.pdf';
 
     downloadLink.href = this.pdfSrc;
     downloadLink.download = fileName;
@@ -371,7 +371,7 @@ export class PropuestasComponent {
   }
   reporteExcel() {
     const downloadLink = document.createElement('a');
-    const fileName = 'ReporteDetalle.xlsx';
+    const fileName = 'Reporte detalle.xlsx';
 
     downloadLink.href = this.pdfSrc;
     downloadLink.download = fileName;
@@ -402,7 +402,7 @@ export class PropuestasComponent {
     }
   }
   guadarArchivo() {
-    this.toastrService.success('Se ha guardado exitosamente la nueva propuesta')
+    this.toastrService.success('Se ha guardado exitosamente la nueva propuesta.')
     this.showAgregarArchivo = false;
   }
   
@@ -429,7 +429,7 @@ export class PropuestasComponent {
         if(tipoCanvas == 'captura')
         this.cerrarCamvasPrincipal();
         this.showCapturaSeguimiento = false;
-        this.toastrService.success("Registro completado correctamente")
+        this.toastrService.success("Registro completado correctamente.")
       } else {                
         // El usuario canceló
         //this.valorRespuestaComfirmarModal.emit(false);
@@ -446,11 +446,11 @@ export class PropuestasComponent {
         break;
       case 'guardarCaptura':
         this.showCapturaSeguimiento = false;
-        this.toastrService.success("Registro guardado correctamente")
+        this.toastrService.success("Registro guardado correctamente.")
         break;
       case 'guardar':
         this.showCapturaSeguimiento = false;
-        this.toastrService.success("Registro guardado correctamente")
+        this.toastrService.success("Registro guardado correctamente.")
         break;      
       default:
         this.showCapturaSeguimiento = false;
@@ -470,7 +470,7 @@ export class PropuestasComponent {
     const fechaFinDate = new Date(this.fFin);
 
     if (fechaInicioDate > fechaFinDate) {
-      this.toastrService.error('La fecha de inicio no puede ser mayor a la fecha final');
+      this.toastrService.error('La fecha de inicio no puede ser mayor a la fecha final.');
       this.fInicio='';
       this.fFin='';
     }
@@ -480,11 +480,11 @@ export class PropuestasComponent {
   }
 
   confirmarCOPER() {
-    this.confirmarModalService.abriraModalCOPER('Al completar este régistro,se marcará como completada la tarea').subscribe(result => {
+    this.confirmarModalService.abriraModalCOPER('Al completar este régistro, se marcará como completada la tarea.').subscribe(result => {
       if (result) {
-        // El usuario aceptó
-        this.toastrService.success("Modúlo Completado");
-  
+        this.cerrarCamvasPrincipal();
+        this.showCapturaSeguimiento = false;
+        this.toastrService.success("Modúlo completado");
       }
     });
 
@@ -496,7 +496,7 @@ export class PropuestasComponent {
     const busca = this.busqueda;
     this.comparaFechas();
       if(busca == ''){
-        this.toastrService.error('Debe de ralizar un filtrado primero');
+        this.toastrService.error('Debe de realizar un filtrado primero.');
       }else{
         this.cambioSeleccion(1);
       }

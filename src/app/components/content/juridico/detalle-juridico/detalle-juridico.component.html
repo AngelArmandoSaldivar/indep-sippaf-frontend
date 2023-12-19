@@ -46,7 +46,7 @@
                                     </button>
                                     <button class="btn btn-link"
                                         (click)="sustituirDocumento()"
-                                        title="Sustituir Documento">
+                                        title="Sustituir documento">
                                         <i class="bi bi-upload"></i>
                                     </button>
                                 </td>
@@ -122,7 +122,7 @@
 <div class="offcanvas offcanvas-end canvasSecundario" [class.show]="showAgregarDocumento" ngtabindex="-1"
     id="offcanvasDocumento" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Cargar Documento</h1>
+        <h1>Cargar documento</h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="cerrarCanvas('documento')"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
@@ -131,11 +131,11 @@
             <div class="row">                 
                 <div class="card-body row" style="padding: 15px 15px;">                
                     <div class="col-md-6">
-                        <label for="documento" class="control-label">Cargar Documento</label>
+                        <label for="documento" class="control-label">Cargar documento</label>
                         <div class="input-group">
-                            <label for="documento" class="control-label" style="display: none" >Cargar Documento</label>
+                            <label for="documento" class="control-label" style="display: none" >Cargar documento</label>
                             <input class="form-control" type="text" placeholder="Ubicación del documento" name="documento" id="documento" size="25" readonly="readonly" value="{{documentoFileName}}" disabled>
-                            <label for="fileDocumento" class="control-label" style="display: none" >Cargar Documento</label>
+                            <label for="fileDocumento" class="control-label" style="display: none" >Cargar documento</label>
                             <input type="file" style="display: none" id="fileDocumento" accept=".pdf" (change)="onDocumentoFileChange($event)" formControlName="key">
                             <span class="input-group-btn" style="vertical-align: bottom">
                             <button type="button" class="btn btn-secundary" id="btnDocumento" name="btnDocumento" onclick="document.getElementById('fileDocumento').click();">Buscar</button>
@@ -174,7 +174,7 @@
 <div class="offcanvas offcanvas-end canvasSecundario" [class.show]="showAgregarAnexo" ngtabindex="-1"
     id="offcanvasDocumento" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Cargar Anexo</h1>
+        <h1>Cargar anexo</h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="cerrarCanvas('showAgregarAnexo')"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
@@ -183,11 +183,11 @@
             <div class="row">                 
                 <div class="card-body row" style="padding: 15px 15px;">                
                     <div class="col-md-6">
-                        <label for="anexo" class="control-label">Cargar Anexo</label>
+                        <label for="anexo" class="control-label">Cargar anexo</label>
                         <div class="input-group">
-                            <label for="anexo" class="control-label" style="display: none" >Cargar Anexo</label>
+                            <label for="anexo" class="control-label" style="display: none" >Cargar anexo</label>
                             <input class="form-control" type="text" placeholder="Ubicación del anexo" name="anexo" id="anexo" size="25" readonly="readonly" value="{{anexoFileName}}" disabled>
-                            <label for="fileAnexo" class="control-label" style="display: none" >Cargar Anexo</label>
+                            <label for="fileAnexo" class="control-label" style="display: none" >Cargar anexo</label>
                             <input type="file" style="display: none" id="fileAnexo" accept=".pdf" (change)="onAnexoFileChange($event)" formControlName="key">
                             <span class="input-group-btn" style="vertical-align: bottom">
                             <button type="button" class="btn btn-secundary" id="btnAnexo" name="btnAnexo" onclick="document.getElementById('fileAnexo').click();">Buscar</button>
@@ -228,7 +228,7 @@
 <div class="offcanvas offcanvas-end canvasSecundario" [class.show]="showGenerarOficio" ngtabindex="-1"
     id="offcanvasDocumento" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Generar Oficio</h1>
+        <h1>Generar oficio</h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="cerrarCanvas('oficio')"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
@@ -250,14 +250,14 @@
 
                         <div class="row" *ngIf="accionDetalle == 3" style="margin-top: 15px;">
                             <div class="col-sm-12">
-                                <label for="detalleOficio" class="form-label">Detalle Oficio</label>
+                                <label for="detalleOficio" class="form-label">Detalle oficio</label>
                                 <textarea class="form-control" id="detalleOficio" rows="6"></textarea>
                             </div>
                         </div>
 
                         <div class="row" *ngIf="accionDetalle == 4" style="margin-top: 15px;">
                             <div class="col-sm-12">
-                                <label for="detalleRecordatorio" class="form-label">Detalle Recordatorio</label>
+                                <label for="detalleRecordatorio" class="form-label">Detalle recordatorio</label>
                                 <textarea class="form-control" id="detalleRecordatorio" rows="6"></textarea>
                             </div>
                         </div>
@@ -280,7 +280,7 @@
 <div class="offcanvas offcanvas-end canvasTerciario" [class.show]="prevDocumento" ngtabindex="-1"
     id="offcanvasDocumento" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Previsualización del Documento</h1>
+        <h1>Previsualización del documento</h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="cerrarCanvas('prevDocumento')"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
@@ -305,7 +305,7 @@
 <div class="offcanvas offcanvas-end canvasSecundario" [class.show]="prevAnexo" ngtabindex="-1"
     id="offcanvasDocumento" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Previsualización del Anexo</h1>
+        <h1>Previsualización del anexo</h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="cerrarCanvas('prevAnexo')"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
@@ -326,7 +326,7 @@
 <div class="offcanvas offcanvas-end canvasSecundario" [class.show]="showSustituirDocumento" ngtabindex="-1"
     id="offcanvasDocumento" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Sustituir Documento</h1>
+        <h1>Sustituir documento</h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="cerrarCanvas('sustituirDocumento')"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
@@ -335,11 +335,11 @@
             <div class="row">                 
                 <div class="card-body row" style="padding: 15px 15px;">                
                     <div class="col-md-6">
-                        <label for="documento" class="control-label">Cargar Documento</label>
+                        <label for="documento" class="control-label">Cargar documento</label>
                         <div class="input-group">
-                            <label for="documento" class="control-label" style="display: none" >Cargar Documento</label>
+                            <label for="documento" class="control-label" style="display: none" >Cargar documento</label>
                             <input class="form-control" type="text" placeholder="Ubicación del documento" name="documento" id="documento" size="25" readonly="readonly" value="{{documentoFileName}}" disabled>
-                            <label for="fileDocumento" class="control-label" style="display: none" >Cargar Documento</label>
+                            <label for="fileDocumento" class="control-label" style="display: none" >Cargar documento</label>
                             <input type="file" style="display: none" id="fileDocumento" accept=".pdf" (change)="onDocumentoFileChange($event)" formControlName="key">
                             <span class="input-group-btn" style="vertical-align: bottom">
                             <button type="button" class="btn btn-secundary" id="btnDocumento" name="btnDocumento" onclick="document.getElementById('fileDocumento').click();">Buscar</button>
@@ -378,7 +378,7 @@
 <div class="offcanvas offcanvas-end canvasSecundario" [class.show]="showSustituirAnexo" ngtabindex="-1"
     id="offcanvasDocumento" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Sustituir Anexo</h1>
+        <h1>Sustituir anexo</h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="cerrarCanvas('showSustituirAnexo')"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
@@ -387,11 +387,11 @@
             <div class="row">                 
                 <div class="card-body row" style="padding: 15px 15px;">                
                     <div class="col-md-6">
-                        <label for="anexo" class="control-label">Cargar Anexo</label>
+                        <label for="anexo" class="control-label">Cargar anexo</label>
                         <div class="input-group">
-                            <label for="anexo" class="control-label" style="display: none" >Cargar Anexo</label>
+                            <label for="anexo" class="control-label" style="display: none" >Cargar anexo</label>
                             <input class="form-control" type="text" placeholder="Ubicación del anexo" name="anexo" id="anexo" size="25" readonly="readonly" value="{{anexoFileName}}" disabled>
-                            <label for="fileAnexo" class="control-label" style="display: none" >Cargar Anexo</label>
+                            <label for="fileAnexo" class="control-label" style="display: none" >Cargar anexo</label>
                             <input type="file" style="display: none" id="fileAnexo" accept=".pdf" (change)="onAnexoFileChange($event)" formControlName="key">
                             <span class="input-group-btn" style="vertical-align: bottom">
                             <button type="button" class="btn btn-secundary" id="btnAnexo" name="btnAnexo" onclick="document.getElementById('fileAnexo').click();">Buscar</button>

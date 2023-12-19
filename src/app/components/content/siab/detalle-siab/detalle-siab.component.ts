@@ -76,7 +76,7 @@ export class DetalleSiabComponent {
 
   guardarSeleccionBien(){
     this.showEditar = false;
-    this.toastrService.success("Se guardaron correctamente los bienes");
+    this.toastrService.success("Se guardarón correctamente los bienes");
 
   }
   ocultarMensaje(){

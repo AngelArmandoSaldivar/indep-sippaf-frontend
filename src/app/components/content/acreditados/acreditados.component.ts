@@ -148,7 +148,7 @@ export class AcreditadosComponent {
       Tipocartera: 'CONTROL Y RESGUARDO'
     },
     {
-      NombreAcreditado: 'Cristina Leon',
+      NombreAcreditado: 'Cristina León',
       IDAcreditado: '103',
       NoCliente: '0261167',
       Fecharegistro: '01/05/2022',
@@ -171,7 +171,7 @@ export class AcreditadosComponent {
   }
   
   guadarAcreditado() {
-    this.toastrService.success('Se ha guardado exitosamente el Nuevo Acreditado')
+    this.toastrService.success('Se ha guardado exitosamente el nuevo acreditado.')
     this.showAgregarAcreditado = false;
   }
 
@@ -188,7 +188,7 @@ export class AcreditadosComponent {
     const fechaInicioDate = new Date(this.fInicio);
     const fechaFinDate = new Date(this.fFin);
     if (fechaInicioDate > fechaFinDate) {
-      this.toastrService.error('La fecha de inicio no puede ser mayor a la fecha final');
+      this.toastrService.error('La fecha de inicio no puede ser mayor a la fecha final.');
       this.fInicio='';
       this.fFin='';
     }

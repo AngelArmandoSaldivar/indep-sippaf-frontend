@@ -15,14 +15,14 @@ export class SaedgComponent {
   @Input() solicitante: string = '';
 
 
-  accionDetalle: number = 1; // accion de detalle
-  documentoNombre: string = '';
-  showDetalle: boolean = false;
-  showGenerarOficio: boolean = false;
-  showAgregarDocumento:  boolean = false;
-  prevDocumento: boolean = false;
-  prevAnexo: boolean = false;
-  documentoFileName: string = "Ubicación del documento";
+  Acciondetalle: number = 1;
+  Documentonombre: string = '';
+  Showdetalle: boolean =false;
+  Showgeneraroficio: boolean = false;
+  Showagregardocumento: boolean = false;
+  Prevdocumento: boolean = false;
+  Prevanexo: boolean = false;
+  Documentofilename: string = "Ubicación del documento";
 
 
 
@@ -34,7 +34,7 @@ export class SaedgComponent {
     
   }
 
-  datosDocumentos: any[] = [
+  Datosdocumentos: any[] = [
     {
       nombreDoc: 'Acta'
     },
@@ -48,34 +48,34 @@ export class SaedgComponent {
  
 
 
-  abrirPdf(documentoNombre: string = '') {
-    this.documentoNombre = documentoNombre;
-    this.showDetalle = true;
+  abrirPdf(Documentonombre: string = '') {
+    this.Documentonombre = Documentonombre;
+    this.Showdetalle = true;
   }
 
 
   cambioAccionDetalle(accion: number) {
-    this.accionDetalle = accion;
+    this.Acciondetalle = accion;
   }
 
   generarOficio() {
-    this.showGenerarOficio = true;
+    this.Showgeneraroficio = true;
   }
 
 
   cerrarCanvas(tipo: string) {
     switch (tipo) {
       case 'oficio':
-        this.showGenerarOficio = false;
+        this.Showgeneraroficio = false;
         break;
       case 'documento':
-        this.showAgregarDocumento = false;
+        this.Showagregardocumento = false;
         break;    
       case 'prevDocumento':
-        this.prevDocumento = false;
+        this.Prevdocumento = false;
         break;
       case 'prevAnexo':
-        this.prevAnexo = false;
+        this.Prevanexo = false;
         break;
       default:
         break;
@@ -85,20 +85,20 @@ export class SaedgComponent {
 
   guardarOficio() {
     this.toastrService.success('Se ha guardado exitosamente el oficio.')
-    this.showGenerarOficio = false;
+    this.Showgeneraroficio = false;
   }  
 
   agregarDocumento() {
-    this.showAgregarDocumento = true;
+    this.Showagregardocumento = true;
   }
 
   onDocumentoFileChange(event: any){
-    this.documentoFileName = event.target.files[0].name;
+    this.Documentofilename = event.target.files[0].name;
   }
 
   guardarDocumentos() {
     this.toastrService.success("Se ha guardado exitosamente el documento.")
-    console.log('Documentos guardados:', this.datosDocumentos);
+    console.log('Documentos guardados:', this.Datosdocumentos);
   }
 
   completarTarea() {

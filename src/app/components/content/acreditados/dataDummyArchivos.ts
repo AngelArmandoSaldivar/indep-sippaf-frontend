@@ -1,29 +1,29 @@
 export const dataArchivos = [
     {
         id: 1,
-        seccion: 'Persona Física',
+        seccion: 'Persona física',
         subseccion: 'Documentos persona física',
         archivo: 'Documento CURP',
         e_firma: true,
     },
     {
         id: 2,
-        seccion: 'Persona Moral',
+        seccion: 'Persona moral',
         subseccion: 'Documentos socios',
         archivo: 'Última declaración anual',
         e_firma: false,
     },
     {
         id: 3,
-        seccion: 'Opinión Técnica',
-        subseccion: 'Docuentos Representante Legal',
-        archivo: 'Comprobante de Domicilio',
+        seccion: 'Opinión técnica',
+        subseccion: 'Docuentos representante legal',
+        archivo: 'Comprobante de domicilio',
         e_firma: true,
     },
     {
         id: 4,
-        seccion: 'Persona Física',
-        subseccion: 'Documentos de la Persona Física',
+        seccion: 'Persona física',
+        subseccion: 'Documentos de la persona física',
         archivo: 'Documento RFC',
         e_firma: true,
     },
@@ -167,7 +167,7 @@ export const dataSucursal = [
 export const TipoCartera = [
     {
         id: 1,
-        tx_descripcion: 'Control y Resguardo',
+        tx_descripcion: 'Control y resguardo',
         tx_ubicaarchivo: 'CYR'
     },
     {

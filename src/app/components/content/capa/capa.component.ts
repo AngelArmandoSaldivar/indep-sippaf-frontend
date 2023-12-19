@@ -40,7 +40,7 @@ export class CapaComponent {
     },
     {
       id: 2,
-      tipoDocumento: 'Opinión Técnica',
+      tipoDocumento: 'Opinión técnica',
       tipoFirma: true,
       firmaElectronica: false,
       firma: true,
@@ -157,8 +157,7 @@ export class CapaComponent {
     });
   }
 
-  abrirDetalle(datos: any, indice: number, tipo: string) {
-    console.log('abro el detalle del bien');
+  abrirDetalle(datos: any, indice: number, tipo: string) {  
     console.log(tipo);
 
 
@@ -205,7 +204,7 @@ export class CapaComponent {
 
     //VALIDAR CAMPO OBSERVACIONES NO ESTE VACIO
     let mensaje = this.tipoAccion ? '¿Estas seguro que quieres aprobar la opinión técnica?' : '¿Estas seguro que quieres rechazar la opinión técnica?';
-    let titulomsm = this.tipoAccion ? 'Se aprobo correctamente la opinión técnica ' : 'Se rechazo correctamente la opinión técnica';
+    let titulomsm = this.tipoAccion ? 'Se aprobó correctamente la opinión técnica ' : 'Se rechazo correctamente la opinión técnica';
     this.confirmarModalService.abriraModal(mensaje).subscribe(result => {
       if (result) {
         // El usuario aceptó

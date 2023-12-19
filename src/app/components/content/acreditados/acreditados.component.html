@@ -29,7 +29,7 @@
                     <input type="date" class="form-control" id="fFin" [(ngModel)]="fFin"  (change)="comparaFechas()">
                 </div>
                 <div class="col-sm-2">
-                    <label class="form-label">Tipo Mandato</label>
+                    <label class="form-label">Tipo mandato</label>
                     <div class="input-group">
                         <label class="form-label" id="busqueda" class="form-control">Selecciona</label>
                         <button class="btn btn-outline btn-primary" title="Buscar" (click)="toggleDisplayMandato()">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="col-sm-2">
-                    <label class="form-label">Tipo Cartera</label>
+                    <label class="form-label">Tipo cartera</label>
                     <div class="input-group">
                         <label class="form-label" id="busqueda" class="form-control">Selecciona</label>
                         <button class="btn btn-outline btn-primary" title="Buscar" (click)="toggleDisplayCartera()">
@@ -57,7 +57,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="P100" id="Control">
                             <label class="form-check-label" for="flexCheckDefault">
-                                Control y Resguardo
+                                Control y resguardo
                             </label>
                         </div>
                         <div class="form-check">
@@ -67,6 +67,10 @@
                             </label>
                         </div>
                     </div>
+                </div>
+                <div class="col-sm-2">
+                    <label class="form-label">Búsqueda</label>
+                    <input type="text" class="form-control" placeholder="Id acreditado">
                 </div>
                 <div class="col-sm-2">
                     <div class="input-group">
@@ -85,9 +89,9 @@
             <table class="table table-hover">
                 <thead>
                     <tr class="table-secondary">
-                        <th style="width: 20%;">Nombre Acreditado</th>
-                        <th style="width: 15%;">ID Acreditado</th>
-                        <th style="width: 15%;">No. Cliente</th>
+                        <th style="width: 20%;">Nombre acreditado</th>
+                        <th style="width: 15%;">Id acreditado</th>
+                        <th style="width: 15%;">Número de cliente</th>
                         <th style="width: 20%;">Fecha registro</th>
                         <th style="width: 20%;">Tipo mandato</th>
                         <th style="width: 20%;">Tipo cartera</th>
@@ -132,7 +136,7 @@
         <div class="card" style="padding: 15px;">
             <div class="row">
                 <div class="col-md-6 mt-1">
-                    <label class="form-label">ID Acreditado:</label>
+                    <label class="form-label">Id Acreditado:</label>
                     <div class="input-group col-md-3">
                         <input type="text" class="form-control" placeholder="12325" disabled>
                     </div>
@@ -140,7 +144,7 @@
                     <div class="input-group col-md-3">
                         <input type="text" class="form-control">
                     </div>
-                    <label class="form-label">No.Cliente:</label>
+                    <label class="form-label">Número de cliente:</label>
                     <div class="input-group col-md-3">
                         <input type="text" class="form-control" placeholder="">
                     </div>
@@ -200,7 +204,7 @@
                             {{ item.tx_descripcion }}
                         </option>
                     </select>
-                    <label for="subseccionAdd" class="control-label">Entidad Federativa:</label>
+                    <label for="subseccionAdd" class="control-label">Entidad federativa:</label>
                     <select class="form-select" aria-label="Default select example" id="subseccionAdd"
                         (change)="changeSubseccion()">
                         <option>Elige una opción</option>

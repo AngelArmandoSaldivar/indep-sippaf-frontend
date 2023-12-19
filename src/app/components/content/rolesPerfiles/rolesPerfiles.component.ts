@@ -65,7 +65,7 @@ export class RolesPerfilesComponent {
     this.showEditPerfilRol = true  
   }
   guardar() {
-    this.toastrService.success('Se ha descargado el archivo exitosamente');
+    this.toastrService.success('Se ha guardado correctamente el perfil.');
     this.cerrarCanvas();
   }
   cerrarCanvas() {

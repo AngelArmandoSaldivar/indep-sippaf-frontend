@@ -12,7 +12,9 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AlertasComponent {
     datosAlertas: any 
-    nombreAlerta: string = 'Hola';
+    nombreAlerta: string = '';
+    tiempoAlerta: string ='';
+    estatusAlerta: string = '';
     showEditarAlerta: boolean = false;
    
 
@@ -50,9 +52,12 @@ export class AlertasComponent {
 
     dataAlertas = dataAlerta;
 
-    editarAlerta(nombre: string) {
+    editarAlerta(nombre: string, tiempo: string, estatus: string) {
         this.nombreAlerta = nombre;
+        this.tiempoAlerta = tiempo;
+        this.estatusAlerta = estatus;
         this.showEditarAlerta = true  
+        
       }
 
 
@@ -65,5 +70,7 @@ export class AlertasComponent {
       }
 
       changeSubseccion() {}
+
+
   
 }

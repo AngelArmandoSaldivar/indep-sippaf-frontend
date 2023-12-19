@@ -1,44 +1,44 @@
-export const dataArchivos = [
+export const Dataarchivos = [
     {
         id: 1,
-        seccion: 'Validacion',
-        archivo: 'Edo. Cuenta Certificado',
+        seccion: 'Validación',
+        archivo: 'Estado de cuenta certificado',
         e_firma: true,
     },
     {
         id: 2,
         seccion: 'SIARAF',
-        archivo: 'Documentación Propuesta',
+        archivo: 'Documentación propuesta',
         e_firma: false,
     },
     {
         id: 3,
         seccion: 'SAEDG',
-        archivo: 'Solicitud Cédula',
+        archivo: 'Solicitud cédula',
         e_firma: true,
     },
     {
         id: 4,
-        seccion: 'Juridico',
-        archivo: 'Layout Saldos',
+        seccion: 'Jurídico',
+        archivo: 'Layout saldos',
         e_firma: true,
     },
     {
         id: 5,
         seccion: 'CAPA',
-        archivo: 'Formato Propuesta',
+        archivo: 'Formato propuesta',
         e_firma: false,
     },
     {
         id: 6,
         seccion: 'SIGEBI',
-        archivo: 'Formato Propuesta',
+        archivo: 'Formato propuesta',
         e_firma: true,
     },
     {
         id: 7,
         seccion: 'Análisis',
-        archivo: 'Solicitud Saldos',
+        archivo: 'Solicitud saldos',
         e_firma: false,
     },
     {
@@ -62,10 +62,10 @@ export const dataArchivos = [
     
 ];
 
-export const dataSeccion = [
+export const Dataseccion = [
     {
         id: 1,
-        tx_descripcion: 'Validacion',
+        tx_descripcion: 'Validación',
         tx_ubicaarchivo: 'VL'
     },
     {
@@ -80,7 +80,7 @@ export const dataSeccion = [
     },
     {
         id: 4,
-        tx_descripcion: 'Juridico',
+        tx_descripcion: 'Jurídico',
         tx_ubicaarchivo: 'JCO'
     },
     {
@@ -115,32 +115,32 @@ export const dataSeccion = [
     },
 ];
 
-export const dataFiles = [
+export const Datafiles = [
     {
         id: 1,
-        tx_descripcion: 'Formato Propuesta',
+        tx_descripcion: 'Formato propuesta',
     },
     {
         id: 2,
-        tx_descripcion: 'Documentación Propuesta',
+        tx_descripcion: 'Documentación propuesta',
     }, {
         id: 3,
-        tx_descripcion: 'Solicitud Cédula',
+        tx_descripcion: 'Solicitud cédula',
     }, {
         id: 4,
-        tx_descripcion: 'Cédula Juridica',
+        tx_descripcion: 'Cédula jurídica',
     }, {
         id: 5,
-        tx_descripcion: 'Solicitud Saldos',
+        tx_descripcion: 'Solicitud saldos',
     }, {
         id: 6,
-        tx_descripcion: 'Layout Saldos',
+        tx_descripcion: 'Layout saldos',
     }, {
         id: 7,
-        tx_descripcion: 'Edo. Cuenta Certificado',
+        tx_descripcion: 'Estado de cuenta certificado',
     }, {
         id: 8,
-        tx_descripcion: 'Dictamen Juridico',
+        tx_descripcion: 'Dictamen jurídico',
     }, {
         id: 9,
         tx_descripcion: 'Detalle del bien',

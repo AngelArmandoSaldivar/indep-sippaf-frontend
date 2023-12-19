@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-12">
-        <h1>Atención al Acreditado</h1>
+        <h1>Atención al acreditado</h1>
         <hr class="red">
     </div>
      <!--Boton agregar acreditado-->
@@ -28,6 +28,10 @@
                     <input type="date" class="form-control" id="fFin" [(ngModel)]="fFin"  (change)="comparaFechas()">
                 </div>
                 <div class="col-sm-2">
+                    <label class="form-label">Búsqueda</label>
+                    <input type="text" class="form-control" placeholder="Id acreditado">
+                </div>
+                <div class="col-sm-2">
                     <div class="input-group">
                         <button class="btn btn-outline btn-primary" title="Buscar" (click)="cambioSeleccion(1)"  style="margin-top: 32px;">
                             <em class="bi bi-search"></em>
@@ -46,11 +50,12 @@
                     <tr class="table-secondary">
                         <th style="width: 10%;">Fecha</th>
                         <th style="width: 10%;">Elaboró</th>
-                        <th style="width: 10%;">No. Cliente</th>
+                        <th style="width: 10%;">Número de cliente</th>
                         <th style="width: 10%;">Acreditado</th>
-                        <th style="width: 10%;">encomienda</th>
+                        <th style="width: 10%;">Encomienda</th>
                         <th style="width: 10%;">Dirección</th>
-                        <th style="width: 10%;">Estado y Municipio</th>
+                        <th style="width: 10%;">Estado</th>
+                        <th style="width: 10%;">Municipio</th>
                         <th style="width: 10%;">Teléfono</th>
                         <th style="width: 10%;">Correo electrónico</th>
                         <th style="width: 10%;">Asunto</th>
@@ -68,6 +73,7 @@
                         <td>{{ dato.encomienda }}</td>
                         <td>{{ dato.direccion}}</td>
                         <td>{{ dato.estadoymuni}}</td>
+                        <td>{{ dato.muni}}</td>
                         <td>{{ dato.telefono}}</td>
                         <td>{{ dato.correo}}</td>
                         <td>{{ dato.asunto}}</td>
@@ -98,7 +104,7 @@
 <div class="offcanvas offcanvas-end canvasPrimario" [class.show]="showAgregarAtencion" [class.offcanvas-bajar]=""
     ngtabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h1>Registro de Atención</h1>
+        <h1>Registro de atención</h1>
         <button type="button" class="btn btn-negativo-modal" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="cerrarOffCanvas(1)"> Cerrar&nbsp;<em class="bi bi-x-octagon"></em></button>
     </div>
@@ -134,10 +140,10 @@
          
             <div class="row">
                 <div class="col-md-12">                    
-                    <label for="subseccionAdd" class="control-label">ID del Acreditado:</label>
+                    <label for="subseccionAdd" class="control-label">Id acreditado:</label>
                     <div class="col-sm-12">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="ida" [(ngModel)]="ida" placeholder="Buscar..." id="busqueda">
+                            <input type="text" class="form-control" id="ida" [(ngModel)]="ida" placeholder="Búscar..." id="busqueda">
                             <button class="btn btn-outline btn-primary" title="Buscar" (click)="busquedaAtencion()">
                                 <em class="bi bi-search"></em>
                             </button>
@@ -149,7 +155,7 @@
                         <input type="text" class="form-control" id="acre" [(ngModel)]="acre" disabled>
                     </div>
                 
-                    <label class="form-label">No.Cliente:</label>
+                    <label class="form-label">Número de cliente:</label>
                     <div class="input-group col-md-3">
                         <input type="text" class="form-control" id="ncli" [(ngModel)]="ncli" disabled>
                     </div>
@@ -169,7 +175,7 @@
                     <div class="input-group">
                         <input type="text" class="form-control" id="muni" [(ngModel)]="muni" placeholder="" disabled>
                     </div>
-                    <label class="form-label">Numero de Teléfono:</label>
+                    <label class="form-label">Numero de teléfono:</label>
                     <div class="input-group">
                         <input type="text" class="form-control" id="ntel" [(ngModel)]="ntel" placeholder="" disabled>
                     </div>
@@ -229,8 +235,7 @@
                             Cancelar
                         </button>
                         <button type="button" class="btn btn-warning boton-derecho" (click)="guadarAtencion()">
-                            Guardar
-                        </button>
+                            Guardar&nbsp;<em class="bi bi-save"></em> </button> &nbsp;&nbsp;
                     </div>
                 </div>
             </div>

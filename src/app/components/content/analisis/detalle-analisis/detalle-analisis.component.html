@@ -1,0 +1,113 @@
+<div class="col-sm-12">
+
+    <div class="card">
+        <div class="card-body row">
+            <div class="col-sm-12">                                      
+                <div class="row mb-6">
+                    <div class="col-md-6">
+                        Tipo de Cartera:
+                    </div>
+                    <div class="col-md-6">                    
+                        <select class="form-select" aria-label="Default select example" id="tipoCartera"
+                            (change)="changeSubseccion($event)">
+                            <option>Elige una opción</option>
+    
+                            <option *ngFor="let item of carteras" [value]="item.id">
+                                {{ item.name }}
+                            </option>
+                        </select>                    
+                    </div>
+                </div>
+            </div>
+            <br /><br /><br />
+            <div class="col-sm-12" *ngIf="inputDemandado">                                      
+                <div class="row mb-6">
+                    <div class="col-md-6">
+                        Demandado
+                    </div>
+                    <div class="col-md-6">                    
+                        <select class="form-select" aria-label="Default select example" id="demandado"
+                            (change)="changeSubseccionDemandado($event)">
+                            <option>Elige una opción</option>
+    
+                            <option *ngFor="let item of dataDemandado" [value]="item.id">
+                                {{ item.name }}
+                            </option>
+                        </select>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body row" *ngIf="inputMontoPendiente">
+            <div class="col-sm-12">                                      
+                <div class="row mb-6">
+                    <div class="col-md-6">
+                        Monto pendiente:
+                    </div>
+                    <div class="col-md-6">                    
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="montoPendiente" disabled>
+                            <span class="input-group-text">.00</span>
+                          </div>          
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body row" *ngIf="inputGastos">
+            <div class="col-sm-12">                                      
+                <div class="row mb-6">
+                    <div class="col-md-6">
+                        Gastos
+                    </div>
+                    <div class="col-md-6">                    
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [(ngModel)]="gastos">
+                            <span class="input-group-text">.00</span>
+                          </div>          
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body row" *ngIf="btnCalcular">
+            <div class="col-sm-12">                                      
+                <div class="row mb-12">
+                    <div class="col-md-6">                        
+                    </div>
+                    <div class="col-md-6" >
+                        <div class="d-grid gap-2 col-12 mx-auto">
+                            <button class="btn btn-outline-primary boton-derecho" (click)="calcular(montoPendiente, gastos)">Calcular</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-body row" *ngIf="cardResultado">
+            <div class="card text-center">
+            <div class="card-header">
+                Resultado
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{resultadoCalculo}}</h5>                 
+            </div>
+            <div class="card-footer text-muted">
+                
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-sm-12">
+    
+</div>

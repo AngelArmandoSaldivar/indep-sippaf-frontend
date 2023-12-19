@@ -40,13 +40,13 @@ export class DetalleCapaComponent {
   ) {
     this.dataAnexos = [
       {
-        name: "Cedula Juridica",
+        name: "Cedula jurídica",
       },
       {
         name: "Recordatorio",
       },
       {
-        name: "Oficio Solicitud",
+        name: "Oficio solicitud",
       },
       {
         name: "Otro",
@@ -54,16 +54,16 @@ export class DetalleCapaComponent {
     ];
     this.dataDocumentos = [
       {
-        name: "Layout Saldos",
+        name: "Layout saldos",
       },
       {
-        name: "Edo Cuenta Cert",
+        name: "Edo cuenta cert",
       },
       {
-        name: "Oficio Solicitud",
+        name: "Oficio solicitud",
       },
       {
-        name: "Dictamen Juridico",
+        name: "Dictamen jurídico",
       },
     ]
   }
@@ -203,8 +203,7 @@ export class DetalleCapaComponent {
     this.toastrService.success('Se ha descargado correctamente el anexo.')
   }
 
-  descargarDocumento(documentoNombre: string = '', accion: string) {
-    console.log("DESCARGAR DOCUMENTO");
+  descargarDocumento(documentoNombre: string = '', accion: string) {  
   }
   sustituirDocumento() {
     this.showSustituirDocumento = true;

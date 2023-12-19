@@ -22,12 +22,12 @@ export const listaCatalogos =
     },
     {
         idCatalogo: 4,
-        descripcion:'Organización Social',
+        descripcion:'Organización social',
         activo: false
     },
     {
         idCatalogo: 5,
-        descripcion:'Número de Póliza',
+        descripcion:'Número de póliza',
         activo: false
     },
     {
@@ -37,7 +37,7 @@ export const listaCatalogos =
     },
     {
         idCatalogo: 7,
-        descripcion:'Unidades Administrativas',
+        descripcion:'Unidades administrativas',
         activo: false
     }
 ]

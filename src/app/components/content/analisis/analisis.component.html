@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="col sm-12">
+            <div class="card" style="padding: 5px;">
+                <div class="card-body row">                
+
+                    <div class="row" *ngIf="accionDetalle == 1" style="margin-top: 15px;">
+                        <sg-detalle-analisis [id_analisis] = "id_analisis"></sg-detalle-analisis>
+                        <!--<sg-detalle-siaraf [id_solicitud]="id_solicitud" [solicitante]="solicitante"></sg-detalle-siaraf>  
+                        <sg-detalle-siaraf [id_solicitud]="id_solicitud" [solicitante]="solicitante"></sg-detalle-siaraf>
+                        <sg-detalle-siaraf [id_solicitud]="id_solicitud" [solicitante]="solicitante"></sg-detalle-siaraf>-->
+                     </div>
+
+                     <div class="row" class="mt-2" *ngIf="accionDetalle == 2" style="margin-top: 15px;">
+                        <div class="card-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr class="table-secondary">
+                                        <th style="width: 50%;">Documento</th>
+                                        <th style="width: 50%;" class="valoresCentrados">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <hr>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>

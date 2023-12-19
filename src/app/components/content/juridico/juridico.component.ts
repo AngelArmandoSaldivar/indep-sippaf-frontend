@@ -40,7 +40,7 @@ export class JuridicoComponent {
     },
     {
       id: 2,
-      tipoDocumento: 'Opinión Técnica',
+      tipoDocumento: 'Opinión técnica',
       tipoFirma: true,
       firmaElectronica: false,
       firma: true,
@@ -158,10 +158,6 @@ export class JuridicoComponent {
   }
 
   abrirDetalle(datos: any, indice: number, tipo: string) {
-    console.log('abro el detalle del bien');
-    console.log(tipo);
-
-
 
     this.listaImagenes = [{ imagen: '../../../../assets/imgen/casa.jpg' },
     { imagen: '../../../../assets/imgen/casa2.png' },
@@ -241,13 +237,11 @@ export class JuridicoComponent {
 
   }
 
-  cerrarCamvasObs() {
-    console.log('cierro el canvas');
+  cerrarCamvasObs() {    
     this.showObs = false;
   }
 
-  verDocumento(documentoNombre: string = '',  tipo: string) {
-    console.log(documentoNombre);
+  verDocumento(documentoNombre: string = '',  tipo: string) {    
     this.documentoNombre = documentoNombre;
     if (documentoNombre.includes('Oficio')) {
       this.pdfSrc = "../../../../../assets/Solicitud_Opinion_tecnica.pdf";

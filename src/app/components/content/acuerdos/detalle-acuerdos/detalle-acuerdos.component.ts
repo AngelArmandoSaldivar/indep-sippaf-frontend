@@ -142,11 +142,11 @@ export class DetalleAcuerdosComponent {
 
   respuestaCofirmarModal(respuesta: boolean) {
     if (respuesta) this.cerrarCamvasPrincipal();
-    this.toastrService.success("Registro guardado correctamente")
+    this.toastrService.success("Registro guardado correctamente.")
   }
 
   confirmarCOPER() {
-    this.confirmarModalService.abriraModalCOPER('Al completar este régistro, se marcará como completada la tarea').subscribe(result => {
+    this.confirmarModalService.abriraModalCOPER('Al completar este régistro, se marcará como completada la tarea.').subscribe(result => {
       if (result) {
         // El usuario aceptó
         this.toastrService.success("Modúlo Completado");

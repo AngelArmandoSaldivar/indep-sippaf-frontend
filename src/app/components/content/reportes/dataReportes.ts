@@ -12,7 +12,7 @@ export const dataAcreditados = [{
     deudor: 'Lorena Zepeda',
     numeroCliente: '187AFC',
     encomienda: 'E1',
-    medioAtencion: '	Correo Electrónico',
+    medioAtencion: '	Correo electrónico',
     monto: '234, 876.00',
     observaciones: 'Si, es observable'
   }]
@@ -26,7 +26,7 @@ export const dataAcreditados = [{
   {
     idAcreditado: 7654,
     idPropuesta: 765,
-    cartera: 'Control y Resguardo',
+    cartera: 'Control y resguardo',
     fecha: '2020-12-08'   
   }]
 
